@@ -1,0 +1,36 @@
+#header{
+    padding: 40px 30px !important;
+}
+
+a{
+    display: block;
+    color: #F47221;
+    /* transform: scale(1.2); */
+    font-weight: 500;
+}
+
+li{
+    cursor: pointer;
+    color: #F47221;
+}
+
+li a{
+    padding: 8px 12px;
+}
+
+li.active{
+    cursor: pointer;
+    color: #F47221;
+    /* border: 1px solid black; */
+    padding: 8px 12px;
+    border-bottom: 2px solid black;
+}
+
+
+li:hover{
+    border-bottom: 2px solid black;
+}
+
+.ms-auto{
+    margin-left: 200px !important;
+}

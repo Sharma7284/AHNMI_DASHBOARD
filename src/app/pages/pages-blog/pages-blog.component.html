@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<!-- <main id="main" class="main"> -->
+    <div class="container" style="margin-top: 80px;">
+        <div *ngFor="let data of blog">
+            <div class="card" (click)="onClick(data.slug , data.status)">
+                <img class="card-img-top" src={{baseurl}}{{data.thumbnail}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title" [innerHTML]="data.name"></h5>
+                    <p class="card-text" [innerHTML]="data.description"></p>
+                    <a href="#" class="btn btn-primary">Read More...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </main> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <app-blog></app-blog> -->
+<app-footer-ahnmi></app-footer-ahnmi>

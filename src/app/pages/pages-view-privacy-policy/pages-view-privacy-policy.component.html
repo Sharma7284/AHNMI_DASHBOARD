@@ -1,0 +1,260 @@
+<main class="main" id="main" *ngIf="!slug">
+    <div class="pagetitle">
+        <!-- <h1>Policy Adovcacy</h1> -->
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active">Policy Adovcacy</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Start Here -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-3">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <ul *ngFor="let d of subCategory" class="p-0 d-none">
+                            <li class="active">{{d.name}}</li>
+                        </ul>
+                        <div class="d-flex align-items-start">
+                            <div class="nav flex-column nav-pills w-100" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                                    aria-selected="true">Submission
+                                </button>
+                                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-profile" type="button" role="tab"
+                                    aria-controls="v-pills-profile" aria-selected="false">Choronological Order
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                aria-labelledby="v-pills-home-tab">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table class="table table-borderless datatable">
+                                            <thead>
+                                                <tr class="bg-dark text-white">
+                                                    <th scope="col">Id</th>
+                                                    <th scope="col">Document</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let d of documentTable">
+                                                    <th scope="row"><a href="#">{{d.id}}</a></th>
+                                                    <td>{{d.documentTitle}}</td>
+                                                    <td class="d-flex gap-2">
+                                                        <!-- <p class="badge p-2 bg-dark">Download</p> -->
+                                                        <p class="badge p-2 bg-info"><a
+                                                                [routerLink]="['/pages-view-policy-adovcacy/', d.slug ]">View</a>
+                                                        </p>
+                                                        <p class="badge p-2 bg-success">Approved</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                aria-labelledby="v-pills-profile-tab">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table class="table table-borderless datatable">
+                                            <thead>
+                                                <tr class="bg-dark text-white">
+                                                    <th scope="col">Id</th>
+                                                    <th scope="col">Document</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let d of documentTable">
+                                                    <th scope="row"><a href="#">{{d.id}}</a></th>
+                                                    <td>{{d.documentTitle}}</td>
+                                                    <td class="d-flex gap-2">
+                                                        <!-- <p class="badge p-2 bg-dark">Download</p> -->
+                                                        <p class="badge p-2 bg-info"><a
+                                                                [routerLink]="['/pages-view-policy-adovcacy/', d.slug ]">View</a>
+                                                        </p>
+                                                        <p class="badge p-2 bg-success">Approved</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<main class="main" id="main" *ngIf="slug">
+    <div class="pagetitle">
+        <!-- <h1>Policy Adovcacy</h1> -->
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active"><a (click)="back()">Policy Adovcacy</a></li>
+                <li class="breadcrumb-item active">Document 1</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Start here with slug -->
+    <div class="container">
+        <h4>{{title}}</h4>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="pdf-container">
+                        <pdf-viewer [src]="src" [fit-to-page]="true" [stick-to-page]="false" [autoresize]="false" [original-size]="true"
+                            [zoom-scale]="'page-width'" [show-all]="true" [page]="page" [render-text]="false"
+                            class="pdfViewer" (after-load-complete)="pdfLoaded($event)" ></pdf-viewer>
+                    </div>
+                    <div class="pdf-btn-container">
+                        <p>{{page}} / {{totalpage}}</p>
+                        <div class="pdf-btn">
+                            <button class="prev" (click)="prev()" [disabled]="page == 1" >Prev</button>
+                            <button class="next" (click)="next()" [disabled]="page == totalpage" >Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <comments currentUserId="1"></comments>
+                    </div>
+
+                    <div class="card-body d-none">
+
+                        <div class="post-card">
+                            <div class="post-header ">
+                                <div class="row d-flex align-items-start  ">
+                                    <div class="col-1">
+                                        <div class="post-avatar ">
+                                            <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1672056729~exp=1672057329~hmac=d6012a7fad767331b5edb44e96ed359d62525c149a7c52367f6f27c129543952" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <p class="m-0 fs-4">Lorem, ipsum dolor.</p>
+                                        <p class="m-0">Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div class="col-3 d-flex align-items-center justify-content-end">
+                                        <div class="post-time"><p class="m-0" >5:45 pm</p></div>
+                                    </div>
+                                </div>
+                                <div class="post-input-box rounded d-flex  pt-4">
+                                    <input type="text" placeholder="Enter your message">
+                                    <!-- <i class="bi bi-send-fill fs-3"></i> -->
+                                    <button class="border-0 " >comment</button>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-item">
+                                    <div class="post-image d-none">
+                                        <img src="https://img.freepik.com/free-vector/medicine-information-poster-with-medication-pharmacy-symbols-realistic-illustration_1284-36588.jpg?w=1060&t=st=1672057086~exp=1672057686~hmac=a69406035c5c28335f072239da23a1aabd5aa2ec42d55cdf9bf579926256278d" alt="">
+                                    </div>
+                                    <div class="post-caption d-none py-2">
+                                        <p class="m-0 fs-6" >Lorem ipsum dolor sit amet. Consequuntur assumenda iste nisi tempore expedita eius similique.</p>
+                                    </div>
+                                    <div class="post-review d-none d-flex justify-content-between align-items-center">
+                                        <div class="post-review-icon">
+                                            <i class="bi bi-suit-heart-fill fs-3 text-danger"></i>
+                                            <!-- <i class="bi bi-suit-heart fs-2"></i> -->
+                                        </div>
+                                        <div class="post-review-report d-flex gap-2">
+                                            <p class="m-0"><span class="fs-6">2&nbsp;</span>Comment</p>
+                                            <p class="m-0"><span class="fs-6">4&nbsp;</span>Share</p>
+                                        </div>
+                                    </div>
+                                    <div class="post-comment d-none px-2 pt-2">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <div class="post-avatar">
+                                                    <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1672056729~exp=1672057329~hmac=d6012a7fad767331b5edb44e96ed359d62525c149a7c52367f6f27c129543952" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-7 px-3">
+                                                <div class="post-comment-box">
+                                                    <h6 class="m-0">Elizabeth goodmen</h6>
+                                                    <p class="m-0">Thanks for sharing!</p>
+                                                </div>
+                                                <div class="post-comment-reply">
+                                                    <a href="">Like</a>
+                                                    <a href="">Reply</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="post-comment-time d-flex align-items-center justify-content-center">
+                                                    <p>6:06 pm</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-footer d-none">
+                                <div class="post-input-box pt-4">
+                                    <input type="text" placeholder="Enter your message">
+                                    <i class="bi bi-send-fill fs-3"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-3">
+                            <div class="col-1"></div>
+                            <div class="col-11">
+                                <div class="post-comment  px-2 pt-2">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="post-avatar">
+                                                <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=740&t=st=1672056729~exp=1672057329~hmac=d6012a7fad767331b5edb44e96ed359d62525c149a7c52367f6f27c129543952" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-7 px-3">
+                                            <div class="post-comment-box">
+                                                <h6 class="m-0 fs-4">Elizabeth goodmen</h6>
+                                                <p class="m-0">Thanks for sharing!</p>
+                                            </div>
+                                            <div class="post-comment-reply">
+                                                <a href="">Like</a>
+                                                <a href="">Reply</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="post-comment-time d-flex align-items-center justify-content-center">
+                                                <p>6:06 pm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

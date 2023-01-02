@@ -1,0 +1,1352 @@
+<main id="main" class="main d-none">
+	<div class="container d-none">
+		<div class="row">
+			<section class="vh-100">
+				<div class="h-100">
+					<div class="row h-100">
+						<div class="col-lg-12 col-xl-11">
+							<div class=" text-black">
+								<div class="">
+									<p class="text-center h1 fw-bold mb-4 mx-1 mx-md-4 mt-4">Membership Form</p>
+									<div class="row">
+
+										<div class="col-md-3 col-lg-3 col-xl-3 order-2 order-lg-1">
+
+											<ul class="d-flex flex-column gap-4 bg-dark text-white py-4"
+												style="list-style: none;">
+												<li><a routerLink="#form-2">Corporate Details</a></li>
+												<li><a href="#form-2">Contact Person For AHNMI</a></li>
+												<li><a href="#form-3">Business Activities Of The Applicant
+														Organization</a></li>
+												<li><a href="#form-4">Other Organization Details</a></li>
+												<li><a href="#form-5">Type And Category Of Membership Sought</a></li>
+												<li><a href="#form-6">Code Of Conduct</a></li>
+											</ul>
+
+										</div>
+
+										<div class="col-md-9 col-lg-9 col-xl-9 order-2 order-lg-1">
+
+
+
+											<form class="mx-1 mx-md-4 w-100" [formGroup]="membershipForm"
+												(ngSubmit)="onMembership(membershipForm)">
+
+												<div class="form-1" id="form-1">
+
+													<!-- 1st -->
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline headline flex-fill mb-0">
+															<h2 class="form-label" for="form3Example1c">1. Corporate
+																Details</h2>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label" for="form3Example1c">Name of
+																organisation</label>
+															<input type="text" id="form3Example1c" class="form-control"
+																formControlName="Name_of_Organization" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label"
+																for="form3Example3c">Address</label>
+															<input type="text" id="form3Example3c" class="form-control"
+																formControlName="Address" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4 mr-2">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label" for="form3Example4c">City</label>
+															<input type="text" id="form3Example4c" class="form-control "
+																formControlName="City" />
+														</div>
+														<div class="form-outline  mb-0">
+															<label class="form-label"
+																for="form3Example4c">Pincode</label>
+															<input type="number" id="form3Example4c"
+																class="form-control" formControlName="PinCode" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label"
+																for="form3Example4c">Telephone</label>
+															<input type="number" id="form3Example4c"
+																class="form-control" formControlName="Telephone" />
+														</div>
+														<div class="form-outline mb-0">
+															<label class="form-label" for="form3Example4c">Fax</label>
+															<input type="number" id="form3Example4c"
+																class="form-control" formControlName="Fax" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-key fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label"
+																for="form3Example4cd">Website</label>
+															<input type="text" id="form3Example4cd" class="form-control"
+																formControlName="Website" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-key fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label" for="form3Example4cd">Organization
+																Head in India (Mr/Ms)</label>
+															<input type="text" id="form3Example4cd" class="form-control"
+																formControlName="Organization_Head_in_India" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label"
+																for="form3Example4c">Designation</label>
+															<input type="text" id="form3Example4c" class="form-control"
+																formControlName="Designation" />
+														</div>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label " for="form3Example4c">Direct
+																Phone</label>
+															<input type="number" id="form3Example4c"
+																class="form-control" formControlName="Direct_Phone" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label"
+																for="form3Example4c">Mobile</label>
+															<input type="number" id="form3Example4c"
+																class="form-control" formControlName="Mobile" />
+														</div>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label " for="form3Example4c">Email
+																Id</label>
+															<input type="email" id="form3Example4c" class="form-control"
+																formControlName="Email_id" />
+														</div>
+													</div>
+
+													<!-- <div class="form-check d-flex justify-content-center mb-5">
+                                                    <input class="form-check-input me-2" type="checkbox" value=""
+                                                        formControlName="form_status" id="form2Example3c" />
+                                                    <label class="form-check-label" for="form2Example3">
+                                                        I agree all statements in <a href="#!">Terms of service</a>
+                                                    </label>
+                                                </div> -->
+												</div>
+
+
+												<div class="form-2 " id="form-2">
+
+													<!-- 2nd -->
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline headline flex-fill mb-0">
+															<h2 class="form-label" for="form3Example1c">2. Contact
+																Person
+																For AHNMI</h2>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label" for="form3Example1c">Name
+																(Mr/Ms)</label>
+															<input type="text" id="form3Example1c" class="form-control"
+																formControlName="Name_Mr_Ms" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label"
+																for="form3Example4c">Designation</label>
+															<input type="text" id="form3Example4c" class="form-control"
+																formControlName="Designation_2" />
+														</div>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label " for="form3Example4c">Direct
+																Phone</label>
+															<input type="number" id="form3Example4c"
+																class="form-control" formControlName="Direct_Phone_2" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label"
+																for="form3Example4c">Mobile</label>
+															<input type="number" id="form3Example4c"
+																class="form-control" formControlName="Mobile_2" />
+														</div>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label " for="form3Example4c">Email
+																Id</label>
+															<input type="email" id="form3Example4c" class="form-control"
+																formControlName="Email_id_2" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">The above person
+																will
+																be on the AHNMI mailing list for
+																all correspondence.</p>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="form-3 ">
+
+													<!-- 3rd -->
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline headline flex-fill mb-0">
+															<h2 class="form-label" for="form3Example1c">3. Business
+																Activities Of The Applicant Organization
+															</h2>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center ">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label"
+																for="form2Example3">Manufacturing
+															</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">
+																Product Development
+															</label>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center ">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Foreign
+																Company Liaison Office</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label"
+																for="form2Example3">Trading</label>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center ">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Product
+																Distributor/Reseller</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">
+																E-commerce
+															</label>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-3 ">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label"
+																for="form2Example3">Educational
+																Institution</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Others
+																(specify)</label>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="form-4 ">
+
+													<!-- 4th -->
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline headline flex-fill mb-0">
+															<h2 class="form-label" style="text-transform:capitalize;"
+																for="form3Example1c">4. Other Organization Details
+															</h2>
+														</div>
+													</div>
+													<div class="d-flex flex-col align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label" for="form3Example1c">Year of
+																Establishment</label>
+															<input type="number" id="form3Example1c"
+																class="form-control" formControlName="name" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<h6 class="form-label" for="form3Example1c">Legal Structure
+																of the Company</h6>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center ">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label"
+																for="form2Example3">Proprietorship</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label"
+																for="form2Example3">Partnership</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Private
+																Ltd</label>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center ">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Public
+																Ltd.</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Public
+																Ltd (Listed)</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label"
+																for="form2Example3">Government Organization</label>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center ">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label"
+																for="form2Example3">Society</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Branch
+																Office</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Liaison
+																Office</label>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">
+																<span style="font-weight: 800;">Annual Turnover from
+																	Herbal Extracts,
+																	Nutraceuticals, Formulations, Dietary, Health
+																	Supplements and Alternative medicine
+																</span>
+																(membership Subscription fees will depend on this
+																figure, detailed statement certified by
+																the MD/Managing Partner of the Co to be enclosed)
+															</p>
+														</div>
+													</div>
+													<div class="d-flex flex-col align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label" for="form3Example1c">Annual
+																revenue during last Financial
+																Year</label>
+															<input type="number" id="form3Example1c"
+																class="form-control" formControlName="name" />
+														</div>
+													</div>
+													<div class="d-flex flex-col align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label" for="form3Example1c"><span
+																	style="font-weight: bold;">Total
+																	Employees</span></label>
+															<input type="number" id="form3Example1c"
+																class="form-control" formControlName="name" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label"
+																for="form3Example4c">Manufacturing</label>
+															<input type="text" id="form3Example4c" class="form-control"
+																formControlName="Designation_2" />
+														</div>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label " for="form3Example4c">Sales /
+																Admin professionals</label>
+															<input type="text" id="form3Example4c" class="form-control"
+																formControlName="Direct_Phone_2" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">
+																<span style="font-weight: 800;">Branch Offices/
+																	Subsidiaries:
+																</span>
+															</p>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">
+																<span style="font-weight: 800;">Where do you want
+																	communications to go Physically / Electronically ?
+																	e-Mail id if Electronically :
+																</span>
+															</p>
+														</div>
+													</div>
+												</div>
+
+
+												<div class="form-5 ">
+
+													<!-- 5th -->
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline headline flex-fill mb-0">
+															<h2 class="form-label" for="form3Example1c">5. Type And
+																Category Of Membership Sought:</h2>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center ">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label" for="form2Example3">Regular
+																Member</label>
+														</div>
+														<div class="form-check d-flex flex-fill mb-3">
+															<input class="form-check-input me-2" type="checkbox"
+																value="" id="form2Example3c" />
+															<label class="form-check-label"
+																for="form2Example3">Associate Member</label>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">
+																<span style="font-weight: 800;">FEES PAYABLE AS PER
+																	CATEGORIZATION:
+																</span>
+															</p>
+														</div>
+													</div>
+
+													<!-- Create Table -->
+													<!-- <div class="d-flex flex-row align-items-center mb-4">
+													<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+													<div class="form-outline flex-fill mb-0">
+														<table>
+														</table>
+													</div>
+												</div> -->
+
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">
+																Mode of Payment - DD/Cheque in the name of
+																<span style="font-weight: 800;">&nbsp;“Association of
+																	Herbal and
+																	Nutraceutical Manufacturers of India”
+																</span>
+															</p>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label" for="form3Example4c">Cheque
+																No</label>
+															<input type="text" id="form3Example4c" class="form-control"
+																formControlName="Designation_2" />
+														</div>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label "
+																for="form3Example4c">Dated</label>
+															<input type="date" id="form3Example4c" class="form-control"
+																formControlName="Direct_Phone_2" />
+														</div>
+													</div>
+													<div class="d-flex flex-col align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label" for="form3Example1c"><span
+																	style="font-weight: bold;">Drawn on
+																	(Bank)</span></label>
+															<input type="text" id="form3Example1c" class="form-control"
+																formControlName="name" />
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">
+																<span style="font-weight: 800;">Send the Cheque to –
+																	AHNMI, C/o Omniactive Health
+																	Technologies Ltd,</span><br>
+																Phoenix House, T-8, 462, Senapati Bapat Marg, Lower
+																Parel, Mumbai, Maharashtra 400013.<br>
+																<span style="font-weight: 800;">L</span> +91-22 2497
+																0003 | <span style="font-weight: 800;">M</span>
+																+91-98500-49251
+															</p>
+														</div>
+													</div>
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">
+																<span style="font-weight: 800;">Online Transfer
+																	details:</span><br>
+															</p>
+														</div>
+													</div>
+													<div style="border: 2px solid black;"
+														class="p-2 d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">Bank name :<span
+																	style="font-weight: 800;">&nbsp;HDFC Bank</span></p>
+															<p class="form-label" for="form3Example1c">Current Account
+																No :<span
+																	style="font-weight: 800;">&nbsp;50200050850413</span>
+															</p>
+															<p class="form-label" for="form3Example1c">Branch :<span
+																	style="font-weight: 800;">&nbsp;JB
+																	Nagar, Andheri East</span></p>
+															<p class="form-label" for="form3Example1c">IFSC code :<span
+																	style="font-weight: 800;">&nbsp;HDFC0001204</span>
+															</p>
+														</div>
+													</div>
+												</div>
+
+
+												<!-- 6th -->
+
+												<div class="form-6 d-none">
+
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class=" form-outline headline flex-fill mb-0">
+															<h2 class="form-label m-0" for="form3Example1c">6. Code Of
+																Conduct</h2>
+														</div>
+													</div>
+
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<p class="form-label" for="form3Example1c">
+																We have read the ‘Code of Conduct’ as applicable to
+																members of AHNMI and we
+																agree to abide by the same in its complete letter and
+																spirit.
+															</p>
+														</div>
+													</div>
+
+													<div class="d-flex flex-col align-items-center mb-4">
+														<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0">
+															<input type="file" id="form3Example1c" class="form-control"
+																formControlName="name" />
+															<label class="form-label pt-3" for="form3Example1c"><span
+																	style="font-weight: bold;">Signature of Authorised
+																	Signatory</span></label>
+														</div>
+													</div>
+
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label" for="form3Example4c">Name</label>
+															<input type="text" id="form3Example4c" class="form-control"
+																formControlName="Designation" />
+														</div>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label "
+																for="form3Example4c">Place</label>
+															<input type="text" id="form3Example4c" class="form-control"
+																formControlName="Direct_Phone" />
+														</div>
+													</div>
+
+													<div class="d-flex flex-row align-items-center mb-4">
+														<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+														<div class="form-outline flex-fill mb-0"
+															style="margin-right: 10px;">
+															<label class="form-label"
+																for="form3Example4c">Designation</label>
+															<input type="text" id="form3Example4c" class="form-control"
+																formControlName="Designation" />
+														</div>
+														<div class="form-outline flex-fill mb-0">
+															<label class="form-label " for="form3Example4c">Date</label>
+															<input type="date" id="form3Example4c" class="form-control"
+																formControlName="Direct_Phone" />
+														</div>
+													</div>
+												</div>
+
+												<div class="d-flex justify-content-center mt-5 mx-4 mb-3 mb-lg-4">
+													<button type="submit" class="btn border-0 btn-success btn-lg">Get
+														Membership</button>
+												</div>
+
+											</form>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+
+	<!-- <p><small>Source: <cite><a href="https://www.bjcp.org/stylecenter.php">BJCP Style Guidelines</a></cite></small></p> -->
+
+
+</main>
+
+
+<main class="main d-none" id="main">
+
+
+	<div class="container">
+
+		<!-- Without Sumbitted -->
+		<div class="row">
+			<div class="col-12">
+
+				<form action="" [formGroup]="membershipForm" (ngSubmit)="onMembership(membershipForm)">
+					<div class="card">
+						<div class="card-body">
+							<h2 class="card-title">Membership Form</h2>
+							<ul class="nav nav-tabs d-flex justify-content-center" #tabs id="myTab" role="tablist">
+								<li class="nav-item" role="presentation"> 
+									<button class="nav-link active" id="home-tab"
+										data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+										aria-controls="home" aria-selected="true">
+										1
+									</button>
+								</li>
+								<li class="nav-item" role="presentation"> <button  class="nav-link" id="profile-tab"
+										data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+										aria-controls="profile" aria-selected="false">2</button></li>
+								<li class="nav-item" role="presentation"> <button class="nav-link" id="contact-tab"
+										data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab"
+										aria-controls="contact" aria-selected="false">3</button></li>
+
+								<li class="nav-item" role="presentation"> <button class="nav-link" id="fouth-tab"
+										data-bs-toggle="tab" data-bs-target="#fouth" type="button" role="tab"
+										aria-controls="fouth" aria-selected="false">4</button>
+								</li>
+
+								<li class="nav-item" role="presentation"> <button class="nav-link" id="five-tab"
+										data-bs-toggle="tab" data-bs-target="#five" type="button" role="tab"
+										aria-controls="five" aria-selected="false">5</button></li>
+
+								<li class="nav-item" role="presentation"> <button class="nav-link" id="six-tab"
+										data-bs-toggle="tab" data-bs-target="#six" type="button" role="tab"
+										aria-controls="six" aria-selected="false">6</button></li>
+
+							</ul>
+							<div class="tab-content pt-2" id="myTabContent">
+								<div class="tab-pane fade show active" id="home" #home (click)="selectTab(home)" role="tabpanel"
+									aria-labelledby="home-tab">
+									<div class="form-1 p-4" id="form-1">
+
+										<!-- 1st -->
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline headline flex-fill mb-0">
+												<h4 class="form-label m-0" for="form3Example1c">1. Corporate
+													Details</h4>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example1c">Name of
+													organisation</label>
+												<input type="text" id="form3Example1c" class="form-control"
+													formControlName="Name_of_Organization" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example3c">Address</label>
+												<input type="text" id="form3Example3c" class="form-control"
+													formControlName="Address" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4 mr-2">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">City</label>
+												<input type="text" id="form3Example4c" class="form-control "
+													formControlName="City" />
+											</div>
+											<div class="form-outline  mb-0">
+												<label class="form-label" for="form3Example4c">Pincode</label>
+												<input type="number" id="form3Example4c" class="form-control"
+													formControlName="PinCode" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Telephone</label>
+												<input type="number" id="form3Example4c" class="form-control"
+													formControlName="Telephone" />
+											</div>
+											<div class="form-outline mb-0">
+												<label class="form-label" for="form3Example4c">Fax</label>
+												<input type="number" id="form3Example4c" class="form-control"
+													formControlName="Fax" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example4cd">Website</label>
+												<input type="text" id="form3Example4cd" class="form-control"
+													formControlName="Website" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-key fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example4cd">Organization
+													Head in India (Mr/Ms)</label>
+												<input type="text" id="form3Example4cd" class="form-control"
+													formControlName="Organization_Head_in_India" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Designation</label>
+												<input type="text" id="form3Example4c" class="form-control"
+													formControlName="Designation" />
+											</div>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label " for="form3Example4c">Direct
+													Phone</label>
+												<input type="number" id="form3Example4c" class="form-control"
+													formControlName="Direct_Phone" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Mobile</label>
+												<input type="number" id="form3Example4c" class="form-control"
+													formControlName="Mobile" />
+											</div>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label " for="form3Example4c">Email
+													Id</label>
+												<input type="email" id="form3Example4c" class="form-control"
+													formControlName="Email_id" />
+											</div>
+										</div>
+
+										<!-- <div class="form-check d-flex justify-content-center mb-5">
+					<input class="form-check-input me-2" type="checkbox" value=""
+						formControlName="form_status" id="form2Example3c" />
+					<label class="form-check-label" for="form2Example3">
+						I agree all statements in <a href="#!">Terms of service</a>
+					</label>
+				</div> -->
+									</div>
+								</div>
+								<div class="tab-pane fade" id="profile" #profile role="tabpanel" aria-labelledby="profile-tab">
+									<div class="form-2 p-4" id="form-2">
+
+										<!-- 2nd -->
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline headline flex-fill mb-0">
+												<h4 class="form-label m-0" for="form3Example1c">2. Contact
+													Person
+													For AHNMI</h4>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example1c">Name
+													(Mr/Ms)</label>
+												<input type="text" id="form3Example1c" class="form-control"
+													formControlName="Name_Mr_Ms" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Designation</label>
+												<input type="text" id="form3Example4c" class="form-control"
+													formControlName="Designation_2" />
+											</div>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label " for="form3Example4c">Direct
+													Phone</label>
+												<input type="number" id="form3Example4c" class="form-control"
+													formControlName="Direct_Phone_2" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Mobile</label>
+												<input type="number" id="form3Example4c" class="form-control"
+													formControlName="Mobile_2" />
+											</div>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label " for="form3Example4c">Email
+													Id</label>
+												<input type="email" id="form3Example4c" class="form-control"
+													formControlName="Email_id_2" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">The above person
+													will
+													be on the AHNMI mailing list for
+													all correspondence.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+									<div class="form-3 p-4">
+
+										<!-- 3rd -->
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline headline flex-fill mb-0">
+												<h4 class="form-label m-0" for="form3Example1c">3. Business
+													Activities Of The Applicant Organization
+												</h4>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center ">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Manufacturing
+												</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">
+													Product Development
+												</label>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center ">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Foreign
+													Company Liaison Office</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Trading</label>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center ">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Product
+													Distributor/Reseller</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">
+													E-commerce
+												</label>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-3 ">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Educational
+													Institution</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Others
+													(specify)</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="fouth" role="tabpanel" aria-labelledby="fouth-tab">
+									<div class="form-4 p-4">
+
+										<!-- 4th -->
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline headline flex-fill mb-0">
+												<h4 class="form-label m-0" style="text-transform:capitalize;"
+													for="form3Example1c">4. Other Organization Details
+												</h4>
+											</div>
+										</div>
+										<div class="d-flex flex-col align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example1c">Year of
+													Establishment</label>
+												<input type="number" id="form3Example1c" class="form-control"
+													formControlName="name" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<h6 class="form-label" for="form3Example1c">Legal Structure
+													of the Company</h6>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center ">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label"
+													for="form2Example3">Proprietorship</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Partnership</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Private
+													Ltd</label>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center ">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Public
+													Ltd.</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Public
+													Ltd (Listed)</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Government
+													Organization</label>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center ">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Society</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Branch
+													Office</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Liaison
+													Office</label>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">
+													<span style="font-weight: 800;">Annual Turnover from
+														Herbal Extracts,
+														Nutraceuticals, Formulations, Dietary, Health
+														Supplements and Alternative medicine
+													</span>
+													(membership Subscription fees will depend on this
+													figure, detailed statement certified by
+													the MD/Managing Partner of the Co to be enclosed)
+												</p>
+											</div>
+										</div>
+										<div class="d-flex flex-col align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example1c">Annual
+													revenue during last Financial
+													Year</label>
+												<input type="number" id="form3Example1c" class="form-control"
+													formControlName="name" />
+											</div>
+										</div>
+										<div class="d-flex flex-col align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example1c"><span
+														style="font-weight: bold;">Total
+														Employees</span></label>
+												<input type="number" id="form3Example1c" class="form-control"
+													formControlName="name" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Manufacturing</label>
+												<input type="text" id="form3Example4c" class="form-control"
+													formControlName="Designation_2" />
+											</div>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label " for="form3Example4c">Sales /
+													Admin professionals</label>
+												<input type="text" id="form3Example4c" class="form-control"
+													formControlName="Direct_Phone_2" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">
+													<span style="font-weight: 800;">Branch Offices/
+														Subsidiaries:
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">
+													<span style="font-weight: 800;">Where do you want
+														communications to go Physically / Electronically ?
+														e-Mail id if Electronically :
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">
+									<div class="form-5 p-4">
+
+										<!-- 5th -->
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline headline flex-fill mb-0">
+												<h4 class="form-label m-0" for="form3Example1c">5. Type And
+													Category Of Membership Sought:</h4>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center ">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Regular
+													Member</label>
+											</div>
+											<div class="form-check d-flex flex-fill mb-3">
+												<input class="form-check-input me-2" type="checkbox" value=""
+													id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3">Associate
+													Member</label>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">
+													<span style="font-weight: 800;">FEES PAYABLE AS PER
+														CATEGORIZATION:
+													</span>
+												</p>
+											</div>
+										</div>
+
+										<!-- Create Table -->
+										<!-- <div class="d-flex flex-row align-items-center mb-4">
+								<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+								<div class="form-outline flex-fill mb-0">
+									<table>
+									</table>
+								</div>
+							</div> -->
+
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">
+													Mode of Payment - DD/Cheque in the name of
+													<span style="font-weight: 800;">&nbsp;“Association of
+														Herbal and
+														Nutraceutical Manufacturers of India”
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Cheque
+													No</label>
+												<input type="text" id="form3Example4c" class="form-control"
+													formControlName="Designation_2" />
+											</div>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label " for="form3Example4c">Dated</label>
+												<input type="date" id="form3Example4c" class="form-control"
+													formControlName="Direct_Phone_2" />
+											</div>
+										</div>
+										<div class="d-flex flex-col align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label" for="form3Example1c"><span
+														style="font-weight: bold;">Drawn on
+														(Bank)</span></label>
+												<input type="text" id="form3Example1c" class="form-control"
+													formControlName="name" />
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">
+													<span style="font-weight: 800;">Send the Cheque to –
+														AHNMI, C/o Omniactive Health
+														Technologies Ltd,</span><br>
+													Phoenix House, T-8, 462, Senapati Bapat Marg, Lower
+													Parel, Mumbai, Maharashtra 400013.<br>
+													<span style="font-weight: 800;">L</span> +91-22 2497
+													0003 | <span style="font-weight: 800;">M</span>
+													+91-98500-49251
+												</p>
+											</div>
+										</div>
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">
+													<span style="font-weight: 800;">Online Transfer
+														details:</span><br>
+												</p>
+											</div>
+										</div>
+										<div style="border: 2px solid black;"
+											class="p-2 d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">Bank name :<span
+														style="font-weight: 800;">&nbsp;HDFC Bank</span></p>
+												<p class="form-label" for="form3Example1c">Current Account
+													No :<span style="font-weight: 800;">&nbsp;50200050850413</span>
+												</p>
+												<p class="form-label" for="form3Example1c">Branch :<span
+														style="font-weight: 800;">&nbsp;JB
+														Nagar, Andheri East</span></p>
+												<p class="form-label" for="form3Example1c">IFSC code :<span
+														style="font-weight: 800;">&nbsp;HDFC0001204</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="six" role="tabpanel" aria-labelledby="six-tab">
+									<div class="form-6 p-4">
+
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class=" form-outline headline flex-fill mb-0">
+												<h4 class="form-label m-0" for="form3Example1c">6. Code Of
+													Conduct</h4>
+											</div>
+										</div>
+
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<p class="form-label" for="form3Example1c">
+													We have read the ‘Code of Conduct’ as applicable to
+													members of AHNMI and we
+													agree to abide by the same in its complete letter and
+													spirit.
+												</p>
+											</div>
+										</div>
+
+										<div class="d-flex flex-col align-items-center mb-4">
+											<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0">
+												<input type="file" id="form3Example1c" class="form-control"
+													formControlName="name" />
+												<label class="form-label pt-3" for="form3Example1c"><span
+														style="font-weight: bold;">Signature of Authorised
+														Signatory</span></label>
+											</div>
+										</div>
+
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Name</label>
+												<input type="text" id="form3Example4c" class="form-control"
+													formControlName="Designation" />
+											</div>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label " for="form3Example4c">Place</label>
+												<input type="text" id="form3Example4c" class="form-control"
+													formControlName="Direct_Phone" />
+											</div>
+										</div>
+
+										<div class="d-flex flex-row align-items-center mb-4">
+											<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+											<div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
+												<label class="form-label" for="form3Example4c">Designation</label>
+												<input type="text" id="form3Example4c" class="form-control"
+													formControlName="Designation" />
+											</div>
+											<div class="form-outline flex-fill mb-0">
+												<label class="form-label " for="form3Example4c">Date</label>
+												<input type="date" id="form3Example4c" class="form-control"
+													formControlName="Direct_Phone" />
+											</div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-center border-0 mt-5 mx-4 mb-3 pb-5 mb-lg-4">
+										<button type="submit" class="btn get-m btn-success btn-lg">Get
+											Membership</button>
+									</div>
+								</div>
+							</div>
+							<div class="card-btn">
+								<a >Previous</a>
+								<a >Save</a>
+								<a class="nextBtn"  (click)="next(tabs)" >Next</a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- With Submitted -->
+		<div *ngIf="false" class="row">
+			<div class="col-3">
+				<div class="card-box d-flex justify-content-center flex-column">
+					<h4 class="card-box-title text-center">Download Certificate</h4>
+					<div class="card-btn ">
+						<button class="d-block"  type="button">Click Here</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<main class="main" id="main">
+	<app-test></app-test>
+</main>

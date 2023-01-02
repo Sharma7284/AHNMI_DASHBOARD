@@ -1,0 +1,59 @@
+.title{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#main{
+    padding: 20px 0px !important;
+}
+
+.pagetitle{
+    padding: 20px 30px;
+}
+
+.card{
+    box-shadow: 0 0 2px 1px #27AA5050;
+}
+
+img{
+    width: 150px;
+    padding: 10px;
+}
+
+i{
+    cursor: pointer;
+}
+
+.banner-title h4{
+    text-transform: capitalize !important;
+}
+
+h4{
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.card-btn{
+    padding: 10px 0 0 0;
+}
+
+button{
+    border: none;
+    display: block;
+    border-radius: 2px;
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    width: 100%;
+    transition: 0.3s all ease;
+}
+
+button:hover{
+    background-color: #BE3E01;
+    color: white;
+}
+
+.card-image img{
+    width: 272px;
+}

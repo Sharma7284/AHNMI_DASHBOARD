@@ -1,0 +1,12 @@
+<div class="container">
+    <div *ngFor="let data of blog">
+        <div class="card" > 
+            <img class="card-img-top" src={{baseurl}}{{data.thumbnail}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" [innerHTML]="data.slug"></h5>
+                <p class="card-text" [innerHTML]="data.description"></p>
+                <a href="" [routerLink]="['/fullblog/', data.slug]" class="btn btn-primary">GO</a>
+            </div>
+        </div>
+    </div>
+</div>

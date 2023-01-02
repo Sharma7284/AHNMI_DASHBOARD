@@ -1,0 +1,8 @@
+button {
+    background: #f47221 !important;
+    border: none;
+}
+
+.btn:focus{
+    box-shadow: none;
+}

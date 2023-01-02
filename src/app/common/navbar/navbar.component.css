@@ -1,0 +1,86 @@
+.elementor-section .elementor-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 130px;
+    margin-left: 130px;
+    padding: 0 40px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section {
+    background: white;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.hfe-nav-menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.hfe-nav-menu li a {
+    color: #f47221;
+    padding: 15px;
+    font-weight: 550;
+}
+
+.hfe-nav-menu li a.active {
+    border-bottom: 4px solid black;
+
+}
+
+.hfe-nav-menu li:last-child a {
+    border: 2px solid #f47221;
+    padding: 16px 12px;
+}
+
+.hfe-nav-menu li:last-child a:hover {
+    background-color: #f47221;
+    color: white;
+}
+
+
+.elementor-2618 .elementor-element.elementor-element-1a6a269a img {
+    width: 213px;
+}
+
+.social-share-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+    list-style: none;
+    gap: 20px;
+    color: white;
+    margin: 0;
+}
+
+.social-share-list a {
+    text-decoration: none;
+    color: white;
+}
+
+.above-navbar .elementor-col-50 {
+    width: 50%;
+}
+
+.above-navbar {
+    display: flex;
+    /* margin: 0 100px; */
+    padding: 6px 120px;
+}
+
+.elementor-icon-list-icon{
+    color: #f47221;
+    font-size: 14px;
+}
+
+.sticky{
+    position: sticky;
+    top: 0; left: 0;
+}

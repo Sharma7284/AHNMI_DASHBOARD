@@ -1,0 +1,202 @@
+<main class="main" id="main">
+
+
+   <div class="pagetitle">
+      <!-- <h1>Policy Adovcacy</h1> -->
+      <nav>
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item active">Regulaltory Support</li>
+         </ol>
+      </nav>
+   </div>
+
+
+   <div class="container" *ngIf="!slug">
+      <div class="row d-flex justify-content-center">
+         <div class="col-4 ">
+            <div class="card d-none">
+               <div class="card-body bg-success p-0">
+                  <h2 class="px-3 text-white pt-3">Domestic</h2>
+                  <div class="px-3 pb-3">
+                     <p style="color: white;" class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                        consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
+                        ullam.</p>
+                  </div>
+                  <div class="view-more-btn text-center">
+                     <button [routerLink]="['/pages-regulaltory-support/', 'domestic']">View More <i
+                           class="bi bi-arrow-right-circle-fill"></i></button>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-body">
+                  <div class="card-title p-0">
+                     <h4>Domestic</h4>
+                  </div>
+                  <div class="card-image">
+                     <img src="assets/img/india-map.jpg" alt="">
+                  </div>
+                  <div class="card-about">
+                     <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, architecto?</p>
+                  </div>
+                  <div class="card-btn d-flex justify-content-end">
+                     <button [routerLink]="['/pages-regulaltory-support/', 'domestic']">Click Here</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-4 ">
+            <div class="card d-none">
+               <div class="card-body bg-danger  p-0">
+                  <h2 class="px-3 text-white pt-3">International</h2>
+                  <div class="px-3 pb-3">
+                     <p class="fs-6 text-dark m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                        consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
+                        ullam.</p>
+                  </div>
+                  <div class="view-more-btn text-center">
+                     <button [routerLink]="['/pages-regulaltory-support/', 'international']">View More <i
+                           class="bi bi-arrow-right-circle-fill"></i></button>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-body">
+                  <div class="card-title p-0 ">
+                     <h4>International</h4>
+                  </div>
+                  <div class="card-image">
+                     <img src="assets/img/world-map.png" alt="">
+                  </div>
+                  <div class="card-about">
+                     <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, architecto?</p>
+                  </div>
+                  <div class="card-btn d-flex justify-content-end">
+                     <button [routerLink]="['/pages-regulaltory-support/', 'international']" >Click Here</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+   <div class="container" *ngIf="slug == 'domestic'">
+      <div class="row">
+         <div class="col-3">
+            <div class="card p-0">
+               <div class="card-body p-0">
+                  <!-- <h5 class="card-title">Vertical Pills Tabs</h5> -->
+                  <div class="d-flex  align-items-start">
+                     <div class="nav w-100 flex-column nav-pills" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="py-2 nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                           data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                           aria-selected="true">FSSAI</button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                           data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                           aria-selected="false">BDA
+                        </button>
+                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                           data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                           aria-selected="false">D&C</button>
+                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                           data-bs-target="#v-pills-exim" type="button" role="tab" aria-controls="v-pills-messages"
+                           aria-selected="false">EXIM</button>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-9">
+            <div class="card">
+               <div class="card-body">
+                  <div class="tab-content" id="v-pills-tabContent">
+                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab"> Sunt est soluta temporibus accusantium neque nam maiores
+                        cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae
+                        quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</div>
+                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab"> Nesciunt totam et. Consequuntur magnam aliquid eos
+                        nulla dolor iure eos quia. Accusantium distinctio omnis et atque fugiat. Itaque doloremque
+                        aliquid sint quasi quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut
+                        laboriosam voluptatum dicta.</div>
+                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab"> Saepe animi et soluta ad odit soluta sunt. Nihil quos
+                        omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis
+                        accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore
+                        dolor.</div>
+                     <div class="tab-pane fade" id="v-pills-exim" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab"> Nesciunt totam et. Consequuntur magnam aliquid eos
+                        nulla dolor iure eos quia. Accusantium distinctio omnis et atque fugiat. Itaque doloremque
+                        aliquid sint quasi quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut
+                        laboriosam voluptatum dicta.</div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container" *ngIf="slug == 'international'">
+      <div class="row">
+         <div class="col-3">
+            <div class="card p-0">
+               <div class="card-body p-0">
+                  <!-- <h5 class="card-title">Vertical Pills Tabs</h5> -->
+                  <div class="d-flex  align-items-start">
+                     <div class="nav w-100 flex-column nav-pills" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="py-2 nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                           data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                           aria-selected="true">Link - 1</button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                           data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                           aria-selected="false">Link - 2
+                        </button>
+                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                           data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                           aria-selected="false">Link - 3</button>
+                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                           data-bs-target="#v-pills-exim" type="button" role="tab" aria-controls="v-pills-messages"
+                           aria-selected="false">Link - 4</button>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-9">
+            <div class="card">
+               <div class="card-body">
+                  <div class="tab-content" id="v-pills-tabContent">
+                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab"> Sunt est soluta temporibus accusantium neque nam maiores
+                        cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae
+                        quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</div>
+                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab"> Nesciunt totam et. Consequuntur magnam aliquid eos
+                        nulla dolor iure eos quia. Accusantium distinctio omnis et atque fugiat. Itaque doloremque
+                        aliquid sint quasi quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut
+                        laboriosam voluptatum dicta.</div>
+                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab"> Saepe animi et soluta ad odit soluta sunt. Nihil quos
+                        omnis animi debitis cumque. Accusantium quibusdam perspiciatis qui qui omnis magnam. Officiis
+                        accusamus impedit molestias nostrum veniam. Qui amet ipsum iure. Dignissimos fuga tempore
+                        dolor.</div>
+                     <div class="tab-pane fade" id="v-pills-exim" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab"> Nesciunt totam et. Consequuntur magnam aliquid eos
+                        nulla dolor iure eos quia. Accusantium distinctio omnis et atque fugiat. Itaque doloremque
+                        aliquid sint quasi quia distinctio similique. Voluptate nihil recusandae mollitia dolores. Ut
+                        laboriosam voluptatum dicta.</div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</main>

@@ -1,0 +1,89 @@
+.view-more-btn{
+    padding: 8px 0px;
+    border-radius: 0 0 4px 4px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.view-more-btn button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+}
+
+.container{
+    padding-top: 50px;
+}
+
+#v-pills-tab button{
+    font-size: 15px !important;
+    font-weight: 500;
+    border-radius: 4px !important;
+    color: black;
+    padding: 12px 0;
+}
+
+.card-image{
+    height: 355px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.card-about{
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+h4{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+button{
+    border: none;
+    display: block;
+    padding: 8px 20px;
+    border-radius: 4px;
+    background-color: #0A1438;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s all ease-in-out;
+}
+
+
+.card-image img{
+    width: 380px;
+}
+
+.card-body{
+    border-radius: 4px;
+}
+
+.text-white{
+    padding: 5px 0;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+}
+
+.fs-6 {
+    font-weight: 500;
+}
+
+#v-pills-tab button.active{
+    /* border-radius: 4px 4px 0 0 !important; */
+    background-color: #f47221;
+    color: white;
+}
+
+#v-pills-tab button:first-child{
+    border-radius: 4px 4px 0 0 !important;
+    padding: 12px 0 !important;
+}
+#v-pills-tab button:last-child{
+    border-radius: 0 0 4px 4px !important;
+}

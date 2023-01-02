@@ -1,0 +1,16 @@
+<div class="toast-box">
+    <div class="toast-content d-flex">
+
+        <i class="bi bi-check-circle-fill check"></i>
+
+        <div class="message d-flex flex-column">
+            <span class="text text-1">{{data.head}}</span>
+            <span class="text text-2">{{data.subline}}</span>
+        </div>
+
+        <i class="bi bi-x-circle-fill close"></i>
+
+        <div class="bar"></div>
+    </div>
+    <button (click)="show()" >Show Toast</button>
+</div>

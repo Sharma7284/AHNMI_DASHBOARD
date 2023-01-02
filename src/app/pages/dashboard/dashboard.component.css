@@ -1,0 +1,170 @@
+.card-title{
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 20px ;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.bg-1{
+    background-color: #890B3B;
+}
+
+.bg-2{
+    background-color: #650CA4;
+}
+
+.num{
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.card-head{
+    position: relative;
+}
+
+.bg-t{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 64px !important;
+    padding-right: 20px;
+}
+
+.t{
+    display: block !important;
+    width: 100%;
+    font-size: 16px !important;
+    font-weight: 500;
+    letter-spacing: .5px;
+    padding-left: 20px;
+    color: #012970;
+}
+
+/* .d-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.d-icon i{
+    /* background-color: rgba(0, 0, 0, 0.25); */
+    border-radius: 0 4px 4px 0;
+    /* padding: 12px 20px; */
+    font-size: 20px;
+    color: white;
+}
+
+.i{
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+.info-card{
+    padding: 0px !important;
+}
+
+.orange{
+    background-color: #FFDC60;
+}
+
+.orange .card-title{
+    color: black !important;
+}
+
+.red{
+    background-color: #FE4A50;
+}
+
+
+.green{
+    background-color: #27AA50;
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+}
+
+.blue{
+    background-color: #5470C6;
+}
+
+.visibilty{
+    visibility: hidden;
+}
+
+.card-icon{
+    background-color: transparent;
+
+}
+
+.dashboard .sales-card .card-icon {
+    background-color: transparent;
+}
+
+.recent-sales .card-body{
+    padding: 10px 20px !important;
+}
+
+
+.dashboard .customers-card .card-icon {
+    background-color: transparent;
+}
+
+.card-body {
+    padding: 10px 20px !important;
+    cursor: pointer;
+}
+
+.dashboard .revenue-card .card-icon{
+    background-color: transparent;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.rounded-left{
+    border-radius: 4px 0 0 4px;
+}
+
+h5{
+    font-weight: 600 !important;
+}
+
+/* view more */
+.view-more-btn{
+    padding: 4px 0px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.view-more-btn button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.dashboard .recent-sales .table thead{
+    background-color: black !important;
+    color: white;
+}
+
+.dashboard .recent-sales .table thead th:nth-child(2){
+    width: 50% !important;
+}
+.dashboard .recent-sales .table thead th:nth-child(1){
+    width: 10% !important;
+}
+
+
+
+.d-icon{
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 4px 0px 0px 4px;
+    padding: 10px 20px;
+}

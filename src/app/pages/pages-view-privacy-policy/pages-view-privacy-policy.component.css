@@ -1,0 +1,210 @@
+.card {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.breadcrumb-item a{
+    color: #899bbd !important;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 12px !important;
+}
+
+#v-pills-tab button{
+    color: black;
+    font-weight: 500;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+#v-pills-tab button.active:first-child {
+    background-color: cadetblue;
+    color: white;
+    border-radius: 4px 4px 0 0 !important;
+    font-weight: 700;
+}
+
+#v-pills-tab button.active {
+    background-color: cadetblue;
+    color: white;
+    border-radius: 0px !important;
+    font-weight: 700;
+}
+
+#v-pills-tab button.active:last-child {
+    background-color: cadetblue;
+    color: white;
+    border-radius: 0 0 4px 4px !important;
+    font-weight: 700;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    border-radius: 0px !important;
+}
+
+ul li {
+    padding: 12px 20px;
+    border-radius: 0px !important;
+}
+
+.breadcrumb a{
+    color: black;
+    font-size: 15px !important;
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.button button {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.heyyy1 {
+    background-color: black !important;
+}
+
+.heyyy2 {
+    background-color: beige !important;
+    color: black !important;
+}
+
+.heyyy1 .button {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+h2 {
+    text-transform: capitalize !important;
+}
+
+.dataTable-sorter::before,
+.dataTable-sorter::after {
+    border-top: 4px solid #fff !important;
+    opacity: 1 !important;
+}
+
+/* Pdf Viewer Class */
+.pdfViewer{
+    display: block;
+    /* width: 500px; */
+    height: 530px;
+    border-radius: 4px !important;
+    margin: 4px;
+}
+
+.pdf-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.pdf-btn-container p{
+    margin: 0;
+    font-size: 15px !important;
+    font-weight: 500;
+}
+
+.pdf-btn-container .pdf-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
+}
+
+.pdf-btn-container .pdf-btn button{
+    border: none;
+    border-radius: 4px;
+    padding: 4px 20px;
+}
+
+
+/* pdf-btn */
+.pdf-btn .next:not(:disabled){
+    background-color: #f47221;
+    font-weight: 400;
+}
+
+.pdf-btn .prev:not(:disabled){
+    background-color: #0A1438;
+    font-weight: 400;
+}
+
+.pdf-btn button:not(:disabled){
+    color: white;
+}
+
+
+
+/* Post Card */
+.post-avatar{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+}
+
+
+.post-avatar img{
+    width: 60px;
+}
+
+.post-image{
+    margin-top: 4px;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    padding: 2px;
+}
+
+.post-image img{ 
+    width: 100%;
+    transform: scale(1.05);
+}
+
+.post-review {
+    border-bottom: .2px solid rgba(0, 0, 0, 0.1);
+    border-top: .2px solid rgba(0, 0, 0, 0.1);
+}
+
+.post-comment-reply {
+    display: flex;
+    gap: 10px;
+}
+.post-comment-reply a{
+    color: blue;
+    font-size: 14px !important;
+}
+
+.post-input-box{
+    position: relative;
+}
+
+.post-input-box{
+    border: 1px solid black;
+    padding: 0px !important;
+    margin-top: 20px;
+    display: flex;
+    overflow: hidden;
+}
+
+.post-input-box input{
+    width: 100%;
+    padding: 8px 20px;
+    border: none;
+    outline: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.post-input-box button{
+    padding: 0 20px;
+}

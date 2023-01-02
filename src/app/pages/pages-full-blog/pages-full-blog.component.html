@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div *ngIf="blogData">
+        <div class="blog-image">
+            <img src="{{baseurl}}{{blogData.thumbnail}}" alt="">
+        </div>
+        <div class="blog-description">
+            <p [innerHTML]="blogData.description" ></p>
+        </div>
+    </div>
+</div>
+<app-footer-ahnmi></app-footer-ahnmi>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- <footer>
+    <div _ngcontent-uii-c86="" class="copyright"> © Copyright <strong _ngcontent-uii-c86=""><span
+                _ngcontent-uii-c86="">AHNMI</span></strong>. All Rights Reserved</div>
+    <a (click)="scrollTop()" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+</footer> -->

@@ -1,0 +1,255 @@
+#msform {
+    position: relative;
+    margin-top: 30px;
+}
+
+
+#progressbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    counter-reset: step;
+}
+
+#progressbar li.inactive:before {
+    background: #0A1438;
+    color: #FFFFFF;
+}
+
+#progressbar li{
+    position: relative;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#progressbar li:first-child:after {
+    content: none;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #27AA50;
+    position: absolute;
+    left: -50%;
+    top: 25px;
+    transform: translateY(-50%);
+    z-index: -1;
+    /*put it behind the numbers*/
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #27AA50;
+    color: white;
+}
+
+#progressbar li.inactive::after{
+    color: white;
+    background-color: #012970;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 50px;
+    height: 50px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #27AA50;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/* Button */
+.next{
+    background-color: #012970;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+}
+
+.previous{
+    background-color: #F47221;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.membership{
+    background-color: #27AA50;
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+fieldset{
+    background-color: #F3F3F3;
+    padding-bottom: 20px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom CSS */
+#main {
+    /* max-height: 90vh; */
+    overflow: auto;
+    padding: 20px 30px !important;
+}
+
+.card-title {
+    font-size: 40px !important;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    width: 103%;
+}
+
+.card {
+    box-shadow: none;
+    border: none;
+}
+
+label {
+    /* color: #27AA50; */
+    color: #012970;
+    font-weight: bold;
+}
+
+input {
+    box-shadow: none;
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    padding: 6px;
+}
+
+input[type="file"] {
+    padding: 10px 16px;
+}
+
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+i {
+    display: none;
+}
+
+.flex-fill {
+    flex: 1 !important;
+}
+
+.headline {
+    background: #F47221;
+    padding: 10px;
+    color: white;
+}
+
+.headline h2 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.nav li a {
+    display: block;
+    padding: 8px 12px;
+    background-color: white;
+}
+
+.nav-item {
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-item button {
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+.nav-link {
+    border-radius: 0px;
+    padding: 12px;
+    /* border-bottom: 2px solid black; */
+    margin: 0 5px 0 0;
+    color: #012970;
+}
+
+.nav-link:hover {
+    /* border: none; */
+    box-shadow: none;
+}
+
+.tab-content {
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+.nav-tabs {
+    border: none;
+    background-color: #EAEEF6;
+    gap: 50px;
+}
+
+.nav-link.active {
+    background-color: #27AA50;
+    color: white;
+    border-radius: 0px;
+    border-bottom: 2px solid black;
+}
+
+.card-btn {
+    margin-top: 20px !important;
+    display: flex;
+    float: right;
+    margin: 0 auto;
+}
+
+.card-btn a {
+    color: #012970;
+    display: block;
+    padding: 12px 20px;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.get-m {
+    border-radius: 0 !important;
+    display: block !important;
+    width: 25% !important;
+    background-color: #27AA50 !important;
+}
+
+
+/* Card-box */
+.card-box {
+    box-shadow: 0 0 2px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #012970;
+    color: white;
+}
+
+.card-box button {
+    border: none;
+    color: #F47221;
+}

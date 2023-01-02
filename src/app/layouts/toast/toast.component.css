@@ -1,0 +1,91 @@
+.toast-box .toast-content {
+    overflow: hidden;
+    padding: 15px 10px;
+    border-left: 4px solid #27AA50;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.25);
+    /* border-radius: 10px; */
+    border-radius: 4px 0 0 4px;
+    transform: translateX(calc(100% + 30px));
+    transition: .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.toast-box {
+    overflow: hidden;
+}
+
+.toast-box .toast-content .close:hover{
+    opacity: 0.8;
+
+}
+.toast-box .toast-content .close{
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 10px;
+    font-size: 12px;
+    opacity: .5;
+    color: red;
+    /* font-weight: 800; */
+}
+
+.toast-box .toast-content .bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 4px;
+    background-color: #ddd;
+}
+
+
+.toast-box .toast-content .bar::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 4px 0;
+    border-bottom: 4px solid #27AA50;
+}
+
+
+.toast-box .toast-content .bar.active::before {
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100% {
+        right: 100%;
+    }
+}
+
+.toast-box .toast-content.active {
+    transform: translateX(0%);
+}
+
+
+.toast-box .toast-content .check {
+    font-size: 20px;
+    color: #27AA50;
+}
+
+.toast-box .toast-content .message {
+    margin: 0 0 0 10px;
+}
+
+.text {
+    font-size: 14px;
+    color: #b2b2b2;
+}
+
+.text-1 {
+    font-weight: 600;
+    color: #00000090 !important;
+}
+
+.text-2 {
+    font-weight: 500;
+}

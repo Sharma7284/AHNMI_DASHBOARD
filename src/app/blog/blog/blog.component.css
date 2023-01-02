@@ -1,0 +1,33 @@
+img {
+    height: 200px !important;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+h5{
+    text-transform: capitalize;
+    padding: 5px 0;
+    margin: 5px 0;
+    display: -webkit-box;
+    max-width: 80%;
+    line-height: 40px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+p{
+    text-transform: capitalize;
+    display: -webkit-box;
+    max-width: 100%;
+    line-height: 28px !important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

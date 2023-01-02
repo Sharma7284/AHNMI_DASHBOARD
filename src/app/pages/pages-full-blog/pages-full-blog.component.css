@@ -1,0 +1,29 @@
+.container{
+    margin-top: 80px;
+}
+
+.blog-image{
+    position: relative;
+    width: 100%;
+    float: left;
+    height: 60vh;
+    margin-bottom: 20px;
+
+}
+
+.blog-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0 !important;
+    border-top: 1px solid #cddfff;
+    text-align: center;
+}
