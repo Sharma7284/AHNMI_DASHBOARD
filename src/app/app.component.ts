@@ -98,6 +98,7 @@ export class AppComponent implements OnInit {
       case /\/pages-schemes-and-subsidies/.test(url):
       case /\/pages-our-services/.test(url):
       case /\/pages-view-policy-adovcacy/.test(url):
+      case /\/check/.test(url):
         return true;
       default: return false
     }

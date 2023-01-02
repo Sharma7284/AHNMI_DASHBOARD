@@ -6,3 +6,4 @@ export interface CommentInterface {
   parentId: null | string;
   createdAt: string;
 }
+

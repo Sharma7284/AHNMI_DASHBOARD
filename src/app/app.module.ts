@@ -68,6 +68,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { CommentsModule } from './comments/comments.module';
 import { LoaderComponent } from './layouts/loader/loader.component';
 import { ToastComponent } from './layouts/toast/toast.component';
+import { MemberpostComponent } from './pages/memberpost/memberpost.component';
+import { CheckComponent } from './pages/check/check.component';
 
 
 @NgModule({
@@ -123,6 +125,8 @@ import { ToastComponent } from './layouts/toast/toast.component';
     PagesViewPrivacyPolicyComponent,
     LoaderComponent,
     ToastComponent,
+    MemberpostComponent,
+    CheckComponent,
 
   ],
 

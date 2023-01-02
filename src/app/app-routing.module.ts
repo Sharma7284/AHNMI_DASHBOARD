@@ -48,6 +48,8 @@ import { PagesViewPrivacyPolicyComponent } from './pages/pages-view-privacy-poli
 import { CommentComponent } from './comments/components/comment/comment.component';
 import { CommentsComponent } from './comments/components/comments/comments.component';
 import { ToastComponent } from './layouts/toast/toast.component';
+import { MemberpostComponent } from './pages/memberpost/memberpost.component';
+import { CheckComponent } from './pages/check/check.component';
 
 
 
@@ -108,6 +110,8 @@ const routes: Routes = [
 
   // Modules
   { path: 'fullblog', component: FullblogComponent },
+  { path: 'mp', component: MemberpostComponent },
+  { path: 'check', component: CheckComponent },
   // { path: 'fullblog/:id', component: FullblogComponent }
 ];
 

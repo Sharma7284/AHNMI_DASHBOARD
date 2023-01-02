@@ -18,20 +18,18 @@
                         <ul *ngFor="let d of subCategory" class="p-0 d-none">
                             <li class="active">{{d.name}}</li>
                         </ul>
-                        <div class="d-flex align-items-start">
+                        <div class="d-flex align-items-start" >
                             <div class="nav flex-column nav-pills w-100" id="v-pills-tab" role="tablist"
                                 aria-orientation="vertical">
-                                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                <button *ngFor="let d of document" class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-                                    aria-selected="true">Submission
+                                    aria-selected="true">{{d.Sub_Category_name}}
                                 </button>
-                                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                <!-- <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-profile" type="button" role="tab"
                                     aria-controls="v-pills-profile" aria-selected="false">Choronological Order
-                                </button>
-
+                                </button> -->
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -124,7 +122,7 @@
     <div class="container">
         <h4>{{title}}</h4>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 ">
                 <div class="card">
                     <div class="pdf-container">
                         <pdf-viewer [src]="src" [fit-to-page]="true" [stick-to-page]="false" [autoresize]="false" [original-size]="true"
@@ -140,11 +138,13 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="col-12">
                 <div class="card">
 
                     <div class="card-body">
-                        <comments currentUserId="1"></comments>
+                        <comments currentUserId="1" ></comments>
                     </div>
 
                     <div class="card-body d-none">

@@ -92,17 +92,53 @@ export class AuthenticationService {
     })
   }
 
+  getSubCategories() {
+
+    let token = localStorage.getItem('token')
+
+    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/subcategory/' + '5' , {
+      headers: {
+        'Authorization' : 'Bearer ' + token
+      }
+    })
+  }
+
   getDocument( file : any ) {
     let token = localStorage.getItem('token')
 
     return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/policy-adovcacy/document-show/' + file,{
       headers:{
-        'Authorization': 'Bearer ' + token
+        'Authorization' : 'Bearer ' + token
       }
     })
   }
 
   getToast( data : any ){
     return data;
+  }
+
+  // Member Post
+
+  postMember( member : any ){
+
+    let token = localStorage.getItem('token')
+    console.log(token)
+
+    return this.http.post<any>('https://datastuntstaging.co.in/ahnmi_lara/api/memberpost', member, {
+      headers : {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+  }
+
+  getMemberPost( id : any ){
+
+    let token = localStorage.getItem('token')
+
+    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/memberpost/view/' + id,{
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
   }
 }

@@ -312,85 +312,10 @@
 
    <div class="container py-5">
       <div class="row">
-         <div class="col-4">
+         <div class="col-4" *ngFor="let d of categoriesData">
             <div class="card ">
                <div class="card-body bg-success rounded text-white p-0">
-                  <h2 class="px-3 pt-3">PLI</h2>
-                  <div class="px-3 pb-3">
-                     <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                        consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
-                        ullam.</p>
-                  </div>
-                  <div class="view-more-btn text-center">
-                     <button (click)="view()">View More <i class="bi bi-arrow-right-circle-fill"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-4">
-            <div class="card ">
-               <div class="card-body bg-info rounded text-white p-0">
-                  <h2 class="px-3 pt-3">BDA</h2>
-                  <div class="px-3 pb-3">
-                     <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                        consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
-                        ullam.</p>
-                  </div>
-                  <div class="view-more-btn text-center">
-                     <button (click)="view()">View More <i class="bi bi-arrow-right-circle-fill"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-4">
-            <div class="card ">
-               <div class="card-body bg-danger rounded text-white p-0">
-                  <h2 class="px-3 pt-3">HSN Code</h2>
-                  <div class="px-3 pb-3">
-                     <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                        consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
-                        ullam.</p>
-                  </div>
-                  <div class="view-more-btn text-center">
-                     <button (click)="view()">View More <i class="bi bi-arrow-right-circle-fill"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-4">
-            <div class="card ">
-               <div class="card-body bg-warning rounded text-dark p-0">
-                  <h2 class="px-3 pt-3">FSSAI</h2>
-                  <div class="px-3 pb-3">
-                     <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                        consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
-                        ullam.</p>
-                  </div>
-                  <div class="view-more-btn text-center">
-                     <button (click)="view()">View More <i class="bi bi-arrow-right-circle-fill"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-4">
-            <div class="card ">
-               <div class="card-body bg-1 rounded text-white p-0">
-                  <h2 class="px-3 pt-3">RoDTEP</h2>
-                  <div class="px-3 pb-3">
-                     <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                        consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
-                        ullam.</p>
-                  </div>
-                  <div class="view-more-btn text-center">
-                     <button (click)="view()">View More <i class="bi bi-arrow-right-circle-fill"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-4">
-            <div class="card ">
-               <div class="card-body bg-2 rounded text-white p-0">
-                  <h2 class="px-3 pt-3">Organic Certificate</h2>
+                  <h2 class="px-3 pt-3">{{d.Category_name}}</h2>
                   <div class="px-3 pb-3">
                      <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
                         consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
@@ -406,3 +331,5 @@
    </div>
 
 </main>
+
+<app-loader *ngIf="isLoading" ></app-loader>

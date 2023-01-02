@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-pages-view-privacy-policy',
@@ -11,12 +12,7 @@ export class PagesViewPrivacyPolicyComponent implements OnInit {
   // Pdf Source Url { Variable }
   src = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf"
 
-  subCategory: any = [
-    { name: 'Sub Category 1', link: '', },
-    { name: 'Sub Category 2', link: '', },
-    { name: 'Sub Category 3', link: '', },
-    { name: 'Sub Category 4', link: '', },
-  ]
+  subCategory: any
 
   document: any = [
     { id: '1', title: 'title', description: 'The quick, brown fox jumps over a lazy dog. Junk MTV quiz graced by fox whelps.', btn_title: 'View More' },
@@ -42,7 +38,7 @@ export class PagesViewPrivacyPolicyComponent implements OnInit {
   page: number = 1;
   totalpage: number = 0;
 
-  constructor(private route: Router, private activeRoute: ActivatedRoute) { }
+  constructor(private route: Router, private activeRoute: ActivatedRoute, private service : AuthenticationService) { }
 
   ngOnInit(): void {
 
@@ -57,10 +53,21 @@ export class PagesViewPrivacyPolicyComponent implements OnInit {
 
         console.log(this.slug)
 
+        this.getSubCategories()
+
       }
     )
 
   }
+
+  getSubCategories() {
+    this.service.getSubCategories().subscribe(
+      (res) => {
+        this.document = res
+        console.log(this.document)
+      } 
+    )
+  } 
 
   pdfLoaded(src: any) {
     this.totalpage = src.numPages

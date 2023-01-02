@@ -1,33 +1,33 @@
-.green{
+.green {
     background-color: #27AA50;
 }
 
-.orange{
+.orange {
     background-color: #f47221;
 }
 
-.bg-1{
+.bg-1 {
     background-color: #0a143890;
 }
 
-.bg-2{
+.bg-2 {
     background-color: tomato;
     opacity: 0.9;
 }
 
-.bg-info{
+.bg-info {
     background-color: #1e130c80 !important;
 }
 
-.card{
+.card {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 }
 
-#v-pills-tabContent{
+#v-pills-tabContent {
     width: 100% !important;
 }
 
-#v-pills-tab button{
+#v-pills-tab button {
     text-align: left;
     color: black;
     padding: 12px 20px;
@@ -38,30 +38,31 @@
     color: white;
 }
 
-.nav-link{
+.nav-link {
     font-weight: 500;
     color: white;
 }
 
-#borderedTabJustified .nav-link:hover{
+#borderedTabJustified .nav-link:hover {
     border: none !important;
     border-radius: 0px !important;
     color: white;
 }
 
 #borderedTabJustified .nav-tabs .nav-link:focus,
-#borderedTabJustified .nav-tabs .nav-link:focus-visible{
+#borderedTabJustified .nav-tabs .nav-link:focus-visible {
     border: none !important;
     /* border-color: #0a1438 !important; */
     color: white;
     outline: none !important;
 }
 
-.nav-tabs{
+.nav-tabs {
     background-color: #0a1438 !important;
     align-items: center;
 }
-.nav-item .nav-link.active{
+
+.nav-item .nav-link.active {
     border-radius: 0px !important;
     color: white;
     background-color: #f47221;
@@ -69,29 +70,53 @@
     border: none;
 }
 
-#v-pills-tabs button{
+#v-pills-tabs button {
     border-radius: 0px !important;
 }
 
-.nav-pills .nav-link.active{
+.nav-pills .nav-link.active {
     border-radius: 0px !important;
 }
 
-.info-card{
+.info-card {
     border-radius: 4px;
 }
 
-.view-more-btn{
+.view-more-btn {
     padding: 4px 0px;
     border-radius: 0 0 4px 4px;
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.view-more-btn button{
+.view-more-btn button {
     border: none;
     background-color: transparent;
     color: white;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: .5px;
+}
+
+.col-4:nth-child(1) .card-body {
+    background-color: #906090 !important;
+}
+
+.col-4:nth-child(2) .card-body {
+    background-color: #355c7d !important;
+}
+
+.col-4:nth-child(3) .card-body {
+    background-color: #7b3b3b !important;
+}
+
+.col-4:nth-child(4) .card-body {
+    background-color: #1f6764 !important;
+}
+
+.col-4:nth-child(5) .card-body {
+    background-color: #a27c2b !important;
+}
+
+.col-4:nth-child(6) .card-body {
+    background-color: #a22b2b !important;
 }
