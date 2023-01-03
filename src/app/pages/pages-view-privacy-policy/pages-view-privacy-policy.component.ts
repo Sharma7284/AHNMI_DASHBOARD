@@ -38,6 +38,7 @@ export class PagesViewPrivacyPolicyComponent implements OnInit {
   page: number = 1;
   totalpage: number = 0;
 
+
   constructor(private route: Router, private activeRoute: ActivatedRoute, private service : AuthenticationService) { }
 
   ngOnInit(): void {
@@ -82,7 +83,9 @@ export class PagesViewPrivacyPolicyComponent implements OnInit {
   }
 
   back(){
-    this.route.navigate(['/pages-view-policy-adovcacy']).then(()=>{
+
+
+    this.route.navigate(['/view-policy-adovcacy']).then(()=>{
       window.location.reload()
     })
   }

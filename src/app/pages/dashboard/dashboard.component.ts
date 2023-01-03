@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
 
     this.service.getCategories().subscribe(
-      (res) =>{
+      (res) => {
 
         // this.file = res
         console.log(this.file)

@@ -44,7 +44,7 @@ export class PagesPolicyAdovcacyComponent implements OnInit {
 
   view() {
 
-    this.route.navigate(['/pages-view-policy-adovcacy']).then(() => {
+    this.route.navigate(['/view-policy-adovcacy']).then(() => {
       window.location.reload();
     })
   }

@@ -93,6 +93,10 @@ h2 {
 }
 
 /* Pdf Viewer Class */
+.pdf-container{
+    background-color: rgba(215, 233, 250, 0.5);
+}
+
 .pdfViewer{
     display: block;
     /* width: 500px; */

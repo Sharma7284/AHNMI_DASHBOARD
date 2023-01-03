@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "body": "Hello",
+      "parentId": null,
+      "createdAt": "2023-01-03T08:27:30.347Z",
+      "userId": "1",
+      "username": "admin",
+      "id": 2
+    },
+    {
+      "body": "hii",
+      "parentId": 2,
+      "createdAt": "2023-01-03T08:27:44.902Z",
+      "userId": "1",
+      "username": "admin",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

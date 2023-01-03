@@ -70,6 +70,7 @@ export class AppComponent implements OnInit {
 
     // console.log(this.url)
 
+    console.log(document.querySelector('div[id="reportsChart"]'))
 
 
   }
@@ -88,16 +89,16 @@ export class AppComponent implements OnInit {
   shouldShowComponent(url: string): boolean {
     switch (true) {
       case /\/dashboard/.test(url):
-      case /\/pages-membership-form/.test(url):
+      case /\/membership-form/.test(url):
       case /\/pages-regulatory/.test(url):
       case /\/user-profile/.test(url):
       case /\/pages-contact/.test(url):
       case /\/pages-faq/.test(url):
-      case /\/pages-policy-adovcacy/.test(url):
-      case /\/pages-regulaltory-support/.test(url):
-      case /\/pages-schemes-and-subsidies/.test(url):
-      case /\/pages-our-services/.test(url):
-      case /\/pages-view-policy-adovcacy/.test(url):
+      case /\/policy-adovcacy/.test(url):
+      case /\/regulaltory-support/.test(url):
+      case /\/schemes-&-subsidies/.test(url):
+      case /\/our-services/.test(url):
+      case /\/view-policy-adovcacy/.test(url):
       case /\/check/.test(url):
         return true;
       default: return false
