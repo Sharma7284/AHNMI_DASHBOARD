@@ -35,12 +35,12 @@ export class PagesSchemesAndSubsidiesComponent implements OnInit {
 
   view(){
 
-    this.route.navigate(['/pages-schemes-and-subsidies/' + 'service'])
+    this.route.navigate(['/schemes-&-subsidies/' + 'service'])
 
   }
 
   view2(){
-    this.route.navigate(['/pages-schemes-and-subsidies/service/' + 'regulatory-checklist'])
+    this.route.navigate(['/schemes-&-subsidies/service/' + 'regulatory-checklist'])
   }
 
 

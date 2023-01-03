@@ -61,8 +61,8 @@ export class HeaderComponent implements OnInit {
   }
 
   backtohome(){
-    this.route.navigate(['/dashboard']).then(()=>{
-      window.location.reload();
-    })
+    // this.route.navigate(['/dashboard']).then(()=>{
+    //   window.location.reload();
+    // })
   }
 }

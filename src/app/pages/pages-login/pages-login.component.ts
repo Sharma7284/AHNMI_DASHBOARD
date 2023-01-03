@@ -49,7 +49,7 @@ export class PagesLoginComponent implements OnInit {
         localStorage.setItem('token', token)
         localStorage.setItem('active', this.loggedIn)
 
-        this.route.navigate(['/pages-membership-form'])
+        this.route.navigate(['/dashboard'])
       },(error) =>{
 
         this.isLoading = false

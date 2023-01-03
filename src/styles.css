@@ -24,6 +24,10 @@ p {
     font-size: 12px !important;
 }
 
+body{
+    background-color: aliceblue;
+}
+
 
 /* Banner Style Start*/
 .banner{
