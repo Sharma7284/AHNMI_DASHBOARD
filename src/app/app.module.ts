@@ -70,6 +70,7 @@ import { LoaderComponent } from './layouts/loader/loader.component';
 import { ToastComponent } from './layouts/toast/toast.component';
 import { MemberpostComponent } from './pages/memberpost/memberpost.component';
 import { CheckComponent } from './pages/check/check.component';
+import { PolicyAdvocacyComponent } from './pages/policy-advocacy/policy-advocacy.component';
 
 
 @NgModule({
@@ -127,6 +128,7 @@ import { CheckComponent } from './pages/check/check.component';
     ToastComponent,
     MemberpostComponent,
     CheckComponent,
+    PolicyAdvocacyComponent,
 
   ],
 

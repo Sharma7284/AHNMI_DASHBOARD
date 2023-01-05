@@ -14,7 +14,7 @@ export class CheckComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.service.getSubCategories().subscribe(
+    this.service.getSubCategories(5).subscribe(
       (res) => {
         console.log(res)
         this.items = res

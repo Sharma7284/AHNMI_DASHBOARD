@@ -1,0 +1,134 @@
+.view-more-btn {
+    padding: 4px 0px;
+    border-radius: 0 0 4px 4px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.view-more-btn a {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+a{
+    cursor: pointer;
+}
+
+tr{
+    text-transform: capitalize;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li a{
+    padding: 12px 20px;
+    display: block;
+}
+
+ul li a.active{
+    background: black;
+    color: white;
+    display: block;
+}
+
+/* Card Body Color */
+.col-4:nth-child(1) .card-body {
+    background-color: #906090 !important;
+}
+
+.col-4:nth-child(2) .card-body {
+    background-color: #355c7d !important;
+}
+
+.col-4:nth-child(3) .card-body {
+    background-color: #7b3b3b !important;
+}
+
+.col-4:nth-child(4) .card-body {
+    background-color: #1f6764 !important;
+}
+
+.col-4:nth-child(5) .card-body {
+    background-color: #a27c2b !important;
+}
+
+.col-4:nth-child(6) .card-body {
+    background-color: #a22b2b !important;
+}
+/* Card Body Color */
+
+/* Document table */
+#documentTable th{
+    background-color: black;
+    color: white;
+}
+#documentTable th:first-child{
+    border-radius: 4px 0 0 4px;
+}
+#documentTable th:last-child{
+    border-radius: 0 4px 4px 0;
+}
+
+/* Pdf start */
+.pdf-container{
+    background-color: #faebd7;
+}
+
+.pdfViewer{
+    display: block;
+    /* width: 500px; */
+    height: 530px;
+    border-radius: 4px !important;
+    margin: 4px;
+}
+
+.pdf-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.pdf-btn-container p{
+    margin: 0;
+    font-size: 15px !important;
+    font-weight: 500;
+}
+
+.pdf-btn-container .pdf-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
+}
+
+.pdf-btn-container .pdf-btn button{
+    border: none;
+    border-radius: 4px;
+    padding: 4px 20px;
+}
+
+
+/* pdf-btn */
+.pdf-btn .next:not(:disabled){
+    background-color: #f47221;
+    font-weight: 400;
+}
+
+.pdf-btn .prev:not(:disabled){
+    background-color: #0A1438;
+    font-weight: 400;
+}
+
+.pdf-btn button:not(:disabled){
+    color: white;
+}
+
+/* Pdf end */

@@ -50,6 +50,7 @@ import { CommentsComponent } from './comments/components/comments/comments.compo
 import { ToastComponent } from './layouts/toast/toast.component';
 import { MemberpostComponent } from './pages/memberpost/memberpost.component';
 import { CheckComponent } from './pages/check/check.component';
+import { PolicyAdvocacyComponent } from './pages/policy-advocacy/policy-advocacy.component';
 
 
 
@@ -92,7 +93,7 @@ const routes: Routes = [
   { path: 'pages-full-blog/:id', component: PagesFullBlogComponent },
   { path: 'pages-full-blog', component: PagesFullBlogComponent },
   { path: 'regulatory', component: PagesRegulatoryComponent },
-  { path: 'policy-adovcacy', component: PagesPolicyAdovcacyComponent },
+  { path: 'policy-adovcacy2', component: PagesPolicyAdovcacyComponent },
   { path: 'view-policy-adovcacy', component: PagesViewPrivacyPolicyComponent },
   { path: 'view-policy-adovcacy/:id', component: PagesViewPrivacyPolicyComponent },
   { path: 'regulaltory-support', component: PagesRegulatorySupportComponent },
@@ -113,6 +114,13 @@ const routes: Routes = [
   { path: 'mp', component: MemberpostComponent },
   { path: 'check', component: CheckComponent },
   // { path: 'fullblog/:id', component: FullblogComponent }
+
+
+  // Policy Adovcacy Routes
+  { path : 'policy-adovcacy', component : PolicyAdvocacyComponent},
+  { path : 'policy-adovcacy/:id', component : PolicyAdvocacyComponent},
+  { path : 'policy-adovcacy/:id/:id2', component : PolicyAdvocacyComponent},
+  // { path : 'policy-adovcacy/:id/:id2/:document', component : PolicyAdvocacyComponent}
 ];
 
 @NgModule({

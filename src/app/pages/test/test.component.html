@@ -26,11 +26,6 @@
                         <label class="form-label" for="form3Example1c">Name of organisation
                             <span class="text-danger fs-500" >*</span>
                         </label>
-                        <!-- <input type="text" id="form3Example1c"  formControlName="Name_of_Organization"
-                        [ngClass]="{ 'is-invalid': corporate_step && corporate.name.errors }" />
-                    <div *ngIf="corporate_step && corporateDetails.controls.Name_of_Organization.errors">
-                        <div *ngIf=" corporate.Name_of_Organization.errors.required ">This is required</div>
-                    </div> -->
                         <input type="text" formControlName="Name_of_Organization" class="form-control"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Name_of_Organization.errors }" />
                         <div *ngIf="corporate_step && corporate.Name_of_Organization.errors?.required">
@@ -751,7 +746,7 @@
                         <label class="form-label " for="form3Example4c">Date
                             <span class="text-danger fs-500" >*</span>
                         </label>
-                        <input type="date" id="form3Example4c" class="form-control" formControlName="date"
+                        <input type="date" id="form3Example4c" class="form-control" formControlName="date2"
                             [ngClass]="{ 'is-invalid': code_of_category_step && codeofconduct.date.errors }" />
                         <div *ngIf="code_of_category_step && codeofconduct.date.errors?.required">
                             <div class="text-danger">Date is required</div>

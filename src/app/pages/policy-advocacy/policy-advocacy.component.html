@@ -1,0 +1,130 @@
+<main class="main" id="main" *ngIf="!categoriesSlug">
+    <div class="pagetitle">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active">Policy Adovcacy</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-4" *ngFor="let d of categories">
+                <div class="card ">
+                    <div class="card-body bg-success rounded text-white p-0">
+                        <h2 class="px-3 pt-3">{{d.Category_name}}</h2>
+                        <div class="px-3 pb-3">
+                            <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                                consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
+                                ullam.</p>
+                        </div>
+                        <div class="view-more-btn text-center">
+                            <a [routerLink]="['/policy-adovcacy/', d.id]">View More <i
+                                    class="bi bi-arrow-right-circle-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<main class="main" id="main" *ngIf="categoriesSlug && !documentSlug">
+    <div class="pagetitle">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active"><a routerLink="/dashboard">Policy Adovcacy</a></li>
+                <li class="breadcrumb-item active">{{categoriesSlug}}</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <nav>
+                            <ul class="m-0 p-0">
+                                <!-- <li *ngFor="let i of subCategories"><a [routerLink]="['/policy-adovcacy/5', i.Sub_Category_name]" >{{i.Sub_Category_name}}</a></li> -->
+                                <li *ngFor="let i of subCategories"><a
+                                        (click)="getDocument(i.id)">{{i.Sub_Category_name}}</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="documentTable" class="w-100">
+                            <thead class=" text-white">
+                                <th class="py-2 text-center" style="width: 8%;">Id</th>
+                                <th class="py-2">Document Name</th>
+                                <th class="py-2" style="width: 20%;">Document Status</th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let d of documentData">
+                                    <td class="text-center">{{d.id}}</td>
+                                    <td>{{d.document_name}}</td>
+                                    <td class="d-flex gap-2 p-3">
+                                        <p class="badge m-0 bg-info p-2"> <a (click)="documentFile(d.id, d.document_name)" class="m-0 p-0 text-white"
+                                                >
+                                                View</a>
+                                        </p>
+                                        <p class="badge m-0 bg-success p-2">Approved</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<main class="main" id="main" *ngIf="documentSlug">
+    <div class="pagetitle">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active"><a routerLink="/dashboard">Policy Adovcacy</a></li>
+                <li class="breadcrumb-item active">{{documentSlug}}</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card ">
+                    <div class="pdf-container rounded">
+                        <pdf-viewer [src]="src" [fit-to-page]="false" [stick-to-page]="true" [autoresize]="true"
+                            [original-size]="true" [zoom-scale]="'page-width'" [show-all]="true" [page]="page"
+                            [render-text]="false" class="pdfViewer"
+                            (after-load-complete)="pdfLoaded($event)"></pdf-viewer>
+                    </div>
+                    <div class="pdf-btn-container">
+                        <p>{{page}} / {{totalpage}}</p>
+                        <div class="pdf-btn">
+                            <button class="prev" (click)="prev()" [disabled]="page == 1">Prev</button>
+                            <button class="next" (click)="next()" [disabled]="page == totalpage">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <comments currentUserId="1"></comments>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

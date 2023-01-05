@@ -59,10 +59,22 @@ export class PagesViewPrivacyPolicyComponent implements OnInit {
       }
     )
 
+    // this.service.getDocument().subscribe(
+    //   (res) => {
+    //     console.log(res)
+    //   }
+    // )
+
+    this.service.getDocumentFile(2).subscribe(
+      (res) => {
+        console.log(res)
+      }
+    )
+
   }
 
   getSubCategories() {
-    this.service.getSubCategories().subscribe(
+    this.service.getSubCategories(5).subscribe(
       (res) => {
         this.document = res
         console.log(this.document)

@@ -30,6 +30,7 @@ export class TestComponent implements OnInit {
 
   ngOnInit(): void {
 
+   
 
     // Done
     this.corporateDetails = this.formBuilder.group({
@@ -56,7 +57,7 @@ export class TestComponent implements OnInit {
       Email_id_2: ['', Validators.required],
     });
 
-    // Not Done
+    // Done
     this.businessDetails = this.formBuilder.group({
       highest_qualification: ['',],
       university: ['',],
@@ -79,7 +80,7 @@ export class TestComponent implements OnInit {
       drawn_on_bank : ['', Validators.required],
     })
 
-    // 
+    // DOne
     this.codeOfConductDetails = this.formBuilder.group({
       file : ['', Validators.required],
       name : ['', Validators.required],
@@ -88,18 +89,19 @@ export class TestComponent implements OnInit {
       date : ['', Validators.required],
     })
 
-    this.membershipForm = this.formBuilder.group({
 
-      first : this.corporateDetails,
-      second : this.contactDetails,
-      third : this.businessDetails,
-      four : this.organizationDetails,
-      five : this.typeAndCategoryDetails,
-      six : this.codeOfConductDetails
+    // this.membershipForm = this.formBuilder.group({
 
-    })
+    //   first : this.corporateDetails,
+    //   second : this.contactDetails,
+    //   third : this.businessDetails,
+    //   four : this.organizationDetails,
+    //   five : this.typeAndCategoryDetails,
+    //   six : this.codeOfConductDetails
 
-    console.log(this.membershipForm.value)
+    // })
+
+    // console.log(this.membershipForm.value)
 
   }
 
@@ -133,6 +135,7 @@ export class TestComponent implements OnInit {
       this.corporate_step = true;
       if (this.corporateDetails.invalid) { return }
       this.step++
+      console.log(this.membershipForm.value)
     }
 
     else if (this.step == 2) {

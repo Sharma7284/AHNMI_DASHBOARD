@@ -23,13 +23,7 @@ export class DashboardComponent implements OnInit {
       }
     )
 
-    this.service.getDocument(this.file).subscribe(
-      (res) => {
-        console.log(res)
-        console.log('hi')
-      }
-    )
-
+    
     var s = document.createElement("script");
     s.type = "text/javascript";
     s.src = "../assets/js/main.js";

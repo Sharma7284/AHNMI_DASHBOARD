@@ -22,7 +22,7 @@ export class AuthenticationService {
     private router: Router,
     private activeRoute: ActivatedRoute
   ) {
-    console.log(this.loggedIn)
+    // console.log(this.loggedIn)
   }
 
   // Login API
@@ -92,50 +92,60 @@ export class AuthenticationService {
     })
   }
 
-  getSubCategories() {
+  getSubCategories(categoriesId: any) {
 
     let token = localStorage.getItem('token')
 
-    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/subcategory/' + '5' , {
+    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/subcategory/' + categoriesId, {
       headers: {
-        'Authorization' : 'Bearer ' + token
-      }
-    })
-  }
-
-  getDocument( file : any ) {
-    let token = localStorage.getItem('token')
-
-    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/policy-adovcacy/document-show/' + file,{
-      headers:{
-        'Authorization' : 'Bearer ' + token
-      }
-    })
-  }
-
-  getToast( data : any ){
-    return data;
-  }
-
-  // Member Post
-
-  postMember( member : any ){
-
-    let token = localStorage.getItem('token')
-    console.log(token)
-
-    return this.http.post<any>('https://datastuntstaging.co.in/ahnmi_lara/api/memberpost', member, {
-      headers : {
         'Authorization': 'Bearer ' + token
       }
     })
   }
 
-  getMemberPost( id : any ){
+  getDocument( doucmentId : any ) {
+    let token = localStorage.getItem('token')
+
+    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/policy-adovcacy/document-show/' + doucmentId, {
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+  }
+
+  getDocumentFile(file: any) {
+    let token = localStorage.getItem('token')
+
+    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/policy-adovcacy/document/' + file, {
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+  }
+
+  getToast(data: any) {
+    return data;
+  }
+
+  // Member Post
+
+  postMember(member: any) {
+
+    let token = localStorage.getItem('token')
+    console.log(token)
+
+    return this.http.post<any>('https://datastuntstaging.co.in/ahnmi_lara/api/memberpost', member, {
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+  }
+
+  getMemberPost(id: any) {
 
     let token = localStorage.getItem('token')
 
-    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/memberpost/view/' + id,{
+    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/memberpost/view/' + id, {
       headers: {
         'Authorization': 'Bearer ' + token
       }

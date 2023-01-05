@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
 
     // console.log(this.url)
 
-    console.log(document.querySelector('div[id="reportsChart"]'))
+    // console.log(document.querySelector('div[id="reportsChart"]'))
 
 
   }
