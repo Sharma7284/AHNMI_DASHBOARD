@@ -11,17 +11,18 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-4" *ngFor="let d of categories">
-                <div class="card ">
+                <div class="card cat-card" (click)="browse(d.Category_name, d.id)">
                     <div class="card-body bg-success rounded text-white p-0">
-                        <h2 class="px-3 pt-3">{{d.Category_name}}</h2>
-                        <div class="px-3 pb-3">
+                        <div class="head w-100 d-flex align-items-center justify-content-between">
+                            <h2 class="px-3 pt-3">{{d.Category_name}}</h2>
+                            <i class="bi bg-t pt-2 bg-5 px-3 fs-1 bi-journal-check"></i>
+                        </div>
+                        <div class="px-3 py-2">
                             <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                consequuntur pariatur reprehenderit veniam voluptatum inventore, atque quisquam iure aut
                                 ullam.</p>
                         </div>
                         <div class="view-more-btn text-center">
-                            <a [routerLink]="['/policy-adovcacy/', d.id]">View More <i
-                                    class="bi bi-arrow-right-circle-fill"></i></a>
+                            <a>View More <i class="bi bi-arrow-right-circle-fill"></i></a>
                         </div>
                     </div>
                 </div>
@@ -43,8 +44,21 @@
     </div>
 
     <div class="container">
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <div class="py-3 sub-categories-title">
+                    <p class="fs-4 ">{{title}}</p>
+                </div>
+                <div class="search-btn">
+                    <input type="text" class="form-control" placeholder="search">
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-3">
+
                 <div class="card">
                     <div class="card-body p-0">
                         <nav>
@@ -71,8 +85,8 @@
                                     <td class="text-center">{{d.id}}</td>
                                     <td>{{d.document_name}}</td>
                                     <td class="d-flex gap-2 p-3">
-                                        <p class="badge m-0 bg-info p-2"> <a (click)="documentFile(d.id, d.document_name)" class="m-0 p-0 text-white"
-                                                >
+                                        <p class="badge m-0 bg-info p-2"> <a (click)="documentFile(d.document_name)"
+                                                class="m-0 p-0 text-white">
                                                 View</a>
                                         </p>
                                         <p class="badge m-0 bg-success p-2">Approved</p>
@@ -102,6 +116,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="card ">
+
+                    <!-- <div class="image">
+                        <img [src]="image" alt="">
+                    </div> -->
+
                     <div class="pdf-container rounded">
                         <pdf-viewer [src]="src" [fit-to-page]="false" [stick-to-page]="true" [autoresize]="true"
                             [original-size]="true" [zoom-scale]="'page-width'" [show-all]="true" [page]="page"
@@ -117,12 +136,89 @@
                     </div>
                 </div>
             </div>
+
+            <!-- COMMENTS START HERE -->
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <comments currentUserId="1"></comments>
+
+                        <h4 class="text-capitalize pb-2">{{documentSlug}}</h4>
+                        <!-- <comments currentUserId="1"></comments> -->
+                        <form class="comment-form d-flex flex-column justify-content-center align-items-end gap-2 "
+                            [formGroup]="commentForm" (ngSubmit)="onComment()">
+
+                            <textarea formControlName="postmessage" class="rounded p-2" placeholder="Write your comment"
+                                rows="4"></textarea>
+                            <div class="comment-btn p-r">
+                                <button id="commentBtn" type="submit" [disabled]="commentForm.invalid"> Comment</button>
+                                <div *ngIf="isLoading" class="loading"></div>
+                            </div>
+
+                            
+                        </form>
+                        <!-- <div *ngIf="true" class="d-flex align-items-center justify-content-center loading">
+                        </div> -->
+
+                        <div class="comment-container d-flex align-items-start py-2"
+                            *ngFor="let c of comments; let i = index">
+                            <div
+                                class="comment-profile-image p-2  d-flex align-items-center justify-content-center rounded-3">
+                                <img class="rounded-circle" src="../../../assets/img/user-icon.png" alt="">
+                            </div>
+                            <div
+                                class="comment-body bg-grey rounded w-100 p-2 d-flex flex-column justify-content-around ">
+                                <div class="comment-body-top  d-flex justify-content-between">
+                                    <p class="m-0 profile-author">AHNMI - admin</p>
+                                    <!-- <p class="m-0">{{c.created_at}}</p> -->
+                                </div>
+                                <p class="m-0 post-message">{{c.postmessage}}</p>
+                                <!-- <div class="reply-btn">
+                                    <button *ngIf="isReply">reply</button>
+                                </div> -->
+                                <div class="comment-feature d-flex gap-2">
+                                    <button *ngIf="!(i==replyCommentId)" (click)="reply(c)"
+                                        class="text-info replybtn pt-1 width-fit text-info mt-2">Reply</button>
+                                    <button *ngIf="i==replyCommentId" (click)="cancel()"
+                                        class="text-info cancelbtn pt-1 width-fit text-info mt-2">Cancel</button>
+
+                                </div>
+                                <form id="{{i}}" *ngIf="i==replyCommentId"
+                                    class="comment-form box{{c.value}} d-flex justify-content-center align-items-center gap-2 py-2"
+                                    [formGroup]="replyForm" (ngSubmit)="onReply(c.id)">
+                                    <textarea formControlName="post_comment" class="rounded p-2"
+                                        placeholder="Write your comment" rows="1"></textarea>
+
+                                    <div class="reply-btn">
+                                        <button id="replybtn" class="btn replybtn" [disabled]="replyForm.invalid"> Reply</button>
+                                        <div *ngIf="isReply" class="loading"></div>
+                                    </div>
+
+                                </form>
+
+                                <div class="comment-container d-flex" *ngFor="let data of c.member_post">
+                                    <div
+                                        class="comment-profile-image p-2  d-flex align-items-center justify-content-center rounded-3">
+                                        <img class="rounded-circle" src="../../../assets/img/user-icon.png" alt="">
+                                    </div>
+                                    <div
+                                        class="comment-body bg-grey rounded w-100 p-2 d-flex flex-column justify-content-around ">
+                                        <div class="comment-body-top d-flex justify-content-between">
+                                            <p class="m-0 profile-author">AHNMI - user</p>
+                                            <!-- <p class="m-0">{{data.created_at}}</p> -->
+                                        </div>
+                                        <p class="m-0 post-message">{{data.post_comment}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
+            </div>
+
+            <div class="col-12">
             </div>
         </div>
     </div>

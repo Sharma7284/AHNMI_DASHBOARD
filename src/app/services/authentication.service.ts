@@ -15,6 +15,11 @@ export class AuthenticationService {
   token: any
   CheckBlog: any
 
+  // Access to fetch
+
+
+
+
   private loggedIn = new BehaviorSubject<boolean>(false)
 
   constructor(
@@ -24,6 +29,7 @@ export class AuthenticationService {
   ) {
     // console.log(this.loggedIn)
   }
+
 
   // Login API
   authLogin(userlogin: UserForLogin) {
@@ -51,6 +57,7 @@ export class AuthenticationService {
 
   // Auth Details API
   authDetails() {
+
     return this.http.get<any>(this.baseUrl + '/details')
   }
 
@@ -61,6 +68,18 @@ export class AuthenticationService {
     console.log(userToken)
 
     return this.http.post<any>(this.baseUrl + '/membership-form', userMember, {
+      headers: {
+        'Authorization': 'Bearer ' + userToken
+      }
+    })
+  }
+
+  authGetMembership() {
+
+    let userToken = localStorage.getItem('token')
+    console.log(userToken)
+
+    return this.http.get<any>(this.baseUrl + '/formdata', {
       headers: {
         'Authorization': 'Bearer ' + userToken
       }
@@ -103,7 +122,7 @@ export class AuthenticationService {
     })
   }
 
-  getDocument( doucmentId : any ) {
+  getDocument(doucmentId: any) {
     let token = localStorage.getItem('token')
 
     return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/policy-adovcacy/document-show/' + doucmentId, {
@@ -118,6 +137,19 @@ export class AuthenticationService {
 
     return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/policy-adovcacy/document/' + file, {
       headers: {
+        'Authorization': 'Bearer ' + token,
+        'Access-Control-Allow-Origin' : '*'
+      }
+    })
+  }
+
+  pli() {
+    let token = localStorage.getItem('token')
+
+    console.log(token)
+
+    return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/policy-adovcacy/document/pli-document', {
+      headers: {
         'Authorization': 'Bearer ' + token
       }
     })
@@ -129,12 +161,32 @@ export class AuthenticationService {
 
   // Member Post
 
-  postMember(member: any) {
+  postMember(comment: any, id: any) {
 
     let token = localStorage.getItem('token')
     console.log(token)
 
+    let member = {
+      postmessage: comment, document_id: id
+    }
+    console.log(member)
+
     return this.http.post<any>('https://datastuntstaging.co.in/ahnmi_lara/api/memberpost', member, {
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+  }
+
+  postReply(postComment: any, e: any, document_id: any) {
+    let token = localStorage.getItem('token')
+    console.log(token)
+
+    let reply = {
+      post_comment: postComment, post_comment_image: '', post_id: e, document_id: document_id
+    }
+
+    return this.http.post<any>('https://datastuntstaging.co.in/ahnmi_lara/api/post-comment', reply, {
       headers: {
         'Authorization': 'Bearer ' + token
       }
@@ -151,4 +203,18 @@ export class AuthenticationService {
       }
     })
   }
+
+  // Stripe Payment
+  createPayment(data: any) {
+
+    let token = localStorage.getItem('token')
+
+    return this.http.post<any>('https://datastuntstaging.co.in/ahnmi_lara/api/stripepayment', data, {
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+  }
+
+
 }

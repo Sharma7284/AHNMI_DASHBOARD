@@ -1,66 +1,57 @@
-<main id="main" class="main">
-   <div class="pagetitle">
-      <h1>Dashboard</h1>
-      <nav>
-         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
-         </ol>
-      </nav>
-   </div>
+<!-- <app-header *ngIf="shouldShowComponent(url)" ></app-header> -->
+
+<main *ngIf="membershipActive" id="main" class="main">
+   
    <section class="section dashboard">
 
       <div class="row py-4">
          <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
-         title="We working on it...">
+         title="Coming Soon">
             <div class="cursor d-flex bg-success rounded align-items-center justify-content-between">
                
                <div class="d-icon">
                   <!-- <i class="bi bi-arrow-down "></i> -->
                   <i class="bi  bi-journal-check"></i>
                </div>
-               <h2 class="t m-0  text-white ">Certificate</h2>
+               <h2 class="t m-0  text-white ">Apply Certification</h2>
             </div>
          </div>
          <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
-         title="We working on it...">
+         title="Coming Soon">
             <div class="cursor d-flex bg-2 rounded align-items-center justify-content-between">
                <div class="d-icon">
                   <!-- <i class="bi bi-arrow-down "></i> -->
                   <i class="bi bi-receipt-cutoff"></i>
                </div>
-               <h2 class="t m-0  text-white ">Invoice </h2>
-            </div>
-         </div>
-         <div class="col-3"data-bs-toggle="tooltip" data-bs-placement="bottom"
-         title="We working on it...">
-            <div class="cursor d-flex bg-1 rounded align-items-center justify-content-between">
-               <div class="d-icon ">
-                  <!-- <i class="bi bi-arrow-down "></i> -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" fill="currentColor"
-                     class="bi p-1 text-white bi-currency-rupee" viewBox="0 0 16 16">
-                     <path
-                        d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
-                  </svg>
-               </div>
-               <h2 class="t m-0  text-white">Payment </h2>
+               <h2 class="t m-0  text-white ">Request Advertisment </h2>
             </div>
          </div>
          <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
-         title="We working on it...">
+         title="Coming Soon">
+            <div class="cursor d-flex bg-1 rounded align-items-center justify-content-between">
+               <div class="d-icon ">
+                  <!-- <i class="bi bi-arrow-down "></i> -->
+                  <i class="bi bi-question-circle-fill"></i>
+                   <!--  -->
+               </div>
+               <h2 class="t m-0  text-white">Ask Query</h2>
+            </div>
+         </div>
+         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
+         title="Coming Soon">
             <div class="cursor d-flex bg-danger rounded align-items-center justify-content-between">
                <div class="d-icon">
                   <!-- <i class="bi bi-arrow-down "></i> -->
                   <i class="bi bi-calendar2-event"></i>
                </div>
-               <h2 class="t m-0 text-white ">Events </h2>
+               <h2 class="t m-0 text-white ">Events & Blogs</h2>
             </div>
          </div>
       </div>
 
       <div class="row">
 
-         <div class="col-xxl-3 col-xl-12">
+         <div class="col-xxl-3 col-xl-12 d-none">
             <div class="card info-card customers-card red">
                
                <div class="card-body">
@@ -82,14 +73,14 @@
                      </div>
                   </div>
                   <div class="view-more-btn d-flex justify-content-center">
-                     <button class=" ">View More <i class="bi bi-arrow-right-circle-fill"></i></button>
+                     <button class=" ">Browse <i class="bi bi-arrow-right-circle-fill"></i></button>
                   </div>
                </div>
             </div>
          </div>
-         <div class="col-xxl-3 col-md-6">
+         <div class="col-xxl-4 col-md-6">
             <div class="card info-card revenue-card blue">
-               <div class="card-body">
+               <div class="card-body" (click)="route('policy-adovcacy')" >
                   <!-- <h5 class="card-title text-white m-0"></h5> -->
                   <div class="card-head d-flex align-items-center justify-content-between">
                      <h5 class="card-title text-white m-0">Policy Adovcacy</h5>
@@ -98,8 +89,8 @@
                   <div class="d-flex align-items-center px-3">
 
                      <div class="py-2">
-                        <span class="num small fs-2 fw-bold">15% </span><span
-                           class="pt-2 text-white ps-1">Increase</span>
+                        <span class="num small fs-2 fw-bold">15 </span><span
+                           class="pt-2 text-white ps-1">Documents</span>
                      </div>
 
                   </div>
@@ -109,7 +100,7 @@
                </div>
             </div>
          </div>
-         <div class="col-xxl-3 col-xl-12">
+         <div class="col-xxl-4 col-xl-12"  > 
             <div class="card info-card customers-card red">
                <!-- <div class="filter">
                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -122,7 +113,7 @@
                       <li><a class="dropdown-item" href="#">This Year</a></li>
                    </ul>
                 </div> -->
-               <div class="card-body">
+               <div class="card-body" style="cursor: 'not-allowed';">
                   <!-- <h5 class="card-title text-white m-0"> </h5> -->
                   <div class="card-head d-flex align-items-center justify-content-between">
                      <h5 class="card-title text-white m-0">Regulaltory Support</h5>
@@ -137,18 +128,18 @@
                               d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
                         </svg></div> -->
                      <div class="">
-                        <span class="text-danger small pt-1 fs-2 fw-bold">12% </span><span
-                           class="text-white font-weight-bold pt-2 ps-1">Increase</span>
+                        <span class="text-danger small pt-1 fs-2 fw-bold">12 </span><span
+                           class="text-white font-weight-bold pt-2 ps-1">Documents</span>
                         <h4 class="m-0"></h4>
                      </div>
                   </div>
                   <div class="view-more-btn d-flex justify-content-center">
-                     <button class=" ">View More <i class="bi bi-arrow-right-circle-fill"></i></button>
+                     <button style="cursor: 'not-allowed';" class=" ">Coming Soon&nbsp; <i class="bi bi-arrow-right-circle-fill"></i></button>
                   </div>
                </div>
             </div>
          </div>
-         <div class="col-xxl-3 col-xl-12">
+         <div class="col-xxl-4 col-xl-12" >
             <div class="card info-card customers-card orange">
                <!-- <div class="filter">
                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -161,7 +152,7 @@
                       <li><a class="dropdown-item" href="#">This Year</a></li>
                    </ul>
                 </div> -->
-               <div class="card-body">
+               <div class="card-body" style="cursor: 'not-allowed';" >
                   <!-- <h5 class="card-title m-0"></h5> -->
                   <div class="card-head d-flex align-items-center justify-content-between">
                      <h5 class="card-title text-white m-0">Schemes & Subsidies</h5>
@@ -173,12 +164,12 @@
                            class="bi bi-ui-checks text-dark d-none"></i></div> -->
                      <div class="ps-3 py-2">
                         <h4 class="m-0"></h4>
-                        <span class=" num  small pt-1 fs-2 fw-bold">28% </span><span
-                           class=" pt-2 ps-1 text-black">Increase</span>
+                        <span class=" num  small pt-1 fs-2 fw-bold">28 </span><span
+                           class=" pt-2 ps-1 text-black">Documents</span>
                      </div>
                   </div>
                   <div class="view-more-btn d-flex justify-content-center">
-                     <button class=" ">View More <i class="bi bi-arrow-right-circle-fill"></i></button>
+                     <button style="cursor: 'not-allowed';" class=" ">Coming Soon &nbsp;<i class="bi bi-arrow-right-circle-fill"></i></button>
                   </div>
                </div>
             </div>
@@ -193,36 +184,36 @@
                   <table class="table table-borderless datatable">
                      <thead>
                         <tr>
-                           <th scope="col">ID</th>
                            <th scope="col">Document</th>
-                           <th scope="col">Status</th>
+                           <th scope="col">Sub Category</th>
+                           <th scope="col">Category</th>
                         </tr>
                      </thead>
                      <tbody>
                         <tr>
                            <th scope="row"><a href="#">2457</a></th>
+                           <td><span class="badge red">Regulaltory Support</span></td>
                            <td>Brandon Jacob</td>
-                           <td><span class="badge bg-success">Approved</span></td>
                         </tr>
                         <tr>
                            <th scope="row"><a href="#">2147</a></th>
+                           <td><span class="badge blue">Policy Adovcacy</span></td>
                            <td>Bridie Kessler</td>
-                           <td><span class="badge bg-warning">Pending</span></td>
                         </tr>
                         <tr>
                            <th scope="row"><a href="#">2049</a></th>
+                           <td><span class="badge bg-warning">Schemes & Subsidies</span></td>
                            <td>Ashleigh Langosh</td>
-                           <td><span class="badge bg-success">Approved</span></td>
                         </tr>
                         <tr>
                            <th scope="row"><a href="#">2644</a></th>
+                           <td><span class="badge red">Regulaltory Support</span></td>
                            <td>Angus Grady</td>
-                           <td><span class="badge bg-danger">Rejected</span></td>
                         </tr>
                         <tr>
                            <th scope="row"><a href="#">2644</a></th>
+                           <td><span class="badge blue">Policy Adovcacy</span></td>
                            <td>Raheem Lehner</td>
-                           <td><span class="badge bg-success">Approved</span></td>
                         </tr>
                      </tbody>
                   </table>
@@ -231,35 +222,55 @@
          </div>
          <div class="col-4 d-flex  flex-column justify-content-between">
 
-            <div class="card ">
+            <div class="card " data-bs-toggle="tooltip" data-bs-placement="bottom"
+            title="Coming Soon">
                <div class="card-body">
                   <div class="row">
                      <div class="col-2 bg-success rounded-left p-2 d-flex align-items-center justify-content-center">
-                        <i class="bi bi-heart fs-2 text-white"></i>
+                        <i class="bi bi-card-checklist fs-2 text-white"></i>
                      </div>
                      <div class="col-10 py-3">
-                        <h5>Mentions</h5>
-                        <h6 class="m-0">1,00,000</h6>
+                        <h5>Activity Checklist</h5>
+                        <h6 class="m-0">Statement to be filled</h6>
 
                      </div>
                   </div>
                </div>
             </div>
-            <div class="card ">
+            <div class="card " data-bs-toggle="tooltip" data-bs-placement="bottom"
+            title="Coming Soon">
                <div class="card-body">
                   <div class="row">
                      <div class="col-2 bg-danger p-2 rounded-left d-flex align-items-center justify-content-center">
-                        <i class="bi bi-cloud-arrow-down  fs-2 text-white"></i>
+                        <i class="bi bi-pencil-square fs-2 text-white"></i>
                      </div>
                      <div class="col-10 py-2">
-                        <h5>Download</h5>
-                        <h6>1,00,000</h6>
+                        <h5>Edit Details</h5>
+                        <h6>Edit membership details</h6>
 
                      </div>
                   </div>
                </div>
             </div>
-            <div class="card ">
+            
+            <div class="card " data-bs-toggle="tooltip" data-bs-placement="bottom"
+            title="Coming Soon">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col-2 blue p-2 rounded-left d-flex align-items-center justify-content-center">
+                        <!-- <i class="bi bi-heart "></i> -->
+                        <i class="bi bi-person-lines-fill fs-2 text-white"></i>
+                     </div>
+                     <div class="col-10 py-2">
+                        <h5>Get Certified</h5>
+                        <h6>Apply for AHNMI certification</h6>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card " data-bs-toggle="tooltip" data-bs-placement="bottom"
+            title="Coming Soon">
                <div class="card-body">
                   <div class="row">
                      <div class="col-2 bg-warning p-2 rounded-left d-flex align-items-center justify-content-center">
@@ -267,21 +278,7 @@
                      </div>
                      <div class="col-10 py-2">
                         <h5>Contact</h5>
-                        <h6>Gaura Verma</h6>
-
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="card ">
-               <div class="card-body">
-                  <div class="row">
-                     <div class="col-2 blue p-2 rounded-left d-flex align-items-center justify-content-center">
-                        <i class="bi bi-heart fs-2 text-white"></i>
-                     </div>
-                     <div class="col-10 py-2">
-                        <h5>Service</h5>
-                        <h6>1,000</h6>
+                        <h6>AHNMI Professionals</h6>
 
                      </div>
                   </div>
@@ -296,7 +293,7 @@
          </div>
       </div>
 
-      <div class="row">
+      <div class="row d-none">
          <div class="col-12 ">
 
             <div class="card">
@@ -384,3 +381,7 @@
       </div>
    </section>
 </main>
+
+<div class="container" *ngFor="!membershipActive">
+   <app-test></app-test>
+</div>

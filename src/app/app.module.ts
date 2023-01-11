@@ -71,6 +71,8 @@ import { ToastComponent } from './layouts/toast/toast.component';
 import { MemberpostComponent } from './pages/memberpost/memberpost.component';
 import { CheckComponent } from './pages/check/check.component';
 import { PolicyAdvocacyComponent } from './pages/policy-advocacy/policy-advocacy.component';
+import { StripeComponent } from './pages/stripe/stripe.component';
+import { NgxStripeModule } from 'ngx-stripe';
 
 
 @NgModule({
@@ -129,6 +131,7 @@ import { PolicyAdvocacyComponent } from './pages/policy-advocacy/policy-advocacy
     MemberpostComponent,
     CheckComponent,
     PolicyAdvocacyComponent,
+    StripeComponent,
 
   ],
 
@@ -139,7 +142,8 @@ import { PolicyAdvocacyComponent } from './pages/policy-advocacy/policy-advocacy
     HttpClientModule,
     BlogModule,
     PdfViewerModule,
-    CommentsModule
+    CommentsModule,
+    NgxStripeModule.forRoot('pk_test_51MH3CBSCK3DQ1FtAszfi1dPAaTzfrhgFkNtnrZPsVTRuQOH1RcsTepxZzSKBdus4GDQNNAnvlXRDJivrXIRARpIX00z1Kffuzl')
   ],
   providers: [],
   bootstrap: [AppComponent]

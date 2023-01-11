@@ -100,6 +100,7 @@ export class AppComponent implements OnInit {
       case /\/our-services/.test(url):
       case /\/view-policy-adovcacy/.test(url):
       case /\/check/.test(url):
+      case /\/stripe/.test(url):
         return true;
       default: return false
     }

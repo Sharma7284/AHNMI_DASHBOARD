@@ -2,6 +2,10 @@
     padding: 40px 30px !important;
 }
 
+#main{
+    padding: 30px !important;
+}
+
 a{
     display: block;
     color: #F47221;
@@ -33,4 +37,9 @@ li:hover{
 
 .ms-auto{
     margin-left: 200px !important;
+}
+
+/* Profile CSS */
+.profile-username{
+    color: #F47221 !important;
 }

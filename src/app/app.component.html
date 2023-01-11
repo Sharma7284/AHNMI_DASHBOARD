@@ -4,8 +4,11 @@
 <!-- <app-sidebar *ngIf="!(_router.url === '/' || _router.url == '/pages-register' || _router.url === '/pages-blog')">
 </app-sidebar> -->
 <app-header *ngIf="shouldShowComponent(url)" ></app-header>
+<!-- <app-header *ngIf="shouldShowComponent(url)" ></app-header> -->
 <!-- <app-sidebar *ngIf="shouldShowComponent(url)"></app-sidebar> -->
-<router-outlet></router-outlet>
+<router-outlet>
+    
+</router-outlet>
 <!-- <app-footer *ngIf="!(_router.url === '/' || _router.url === '/pages-register' || _router.url === '/pages-blog')">
 </app-footer> -->
 <app-footer *ngIf="shouldShowComponent(url)"></app-footer>

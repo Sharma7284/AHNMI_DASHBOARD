@@ -24,6 +24,43 @@
   h1, h2, h3, h4, h5, h6 {
 	font-family: "Nunito", sans-serif;
   }
+
+  /* ----------------------------------------------------------
+  # Loading
+  
+ ----------------------------------------------------------------- */
+ .hide{
+	display: none !important;
+ }
+
+ .show{
+	display: block !important;
+ }
+
+ .p-r{
+	position: relative;
+ }
+
+ .loading {
+    width: 100%;
+    border: 4px solid #ccc;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-top-color: white;
+    border-left-color: white;
+    animation: spin 1s linear infinite ;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
   
   /*--------------------------------------------------------------
   # Main
@@ -99,7 +136,7 @@
 	box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
   }
   .dropdown-menu .dropdown-header, .dropdown-menu .dropdown-footer {
-	text-align: center;
+	/* text-align: center; */
 	font-size: 15px;
 	padding: 10px 25px;
   }

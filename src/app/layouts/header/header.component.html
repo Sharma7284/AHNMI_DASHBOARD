@@ -153,13 +153,33 @@
       </ul>
    </nav>
    <div class="header-nav ms-auto">
-      <ul class="d-flex gap-3 align-items-center">
+      <ul class="d-flex gap-1 align-items-center">
          <li> <a routerLink="dashboard">Dashboard</a></li>
          <li> <a routerLink="membership-form">Membership</a></li>
          <li> <a routerLink="policy-adovcacy"> Policy Adovcacy</a></li>
          <li> <a routerLink="regulaltory-support">Regulaltory Support</a> </li>
          <li> <a routerLink="schemes-&-subsidies"> Schemes & Subsidies</a></li>
          <li> <a routerLink="our-services">Our Services</a></li>
+         <li class="nav-item  dropdown pe-3">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown"> <img
+                  src="../../../assets/img/user-icon.png" alt="Profile" class="rounded-circle"> <span
+                  class="d-none d-md-block dropdown-toggle ps-2 profile-username">Jassa</span> </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+               <li class="dropdown-header d-flex gap-2">
+                  <img class="rounded-circle" src="../../../assets/img/user-icon.png" alt="">
+                  <div class="d-flex flex-column">
+                     <h6 class="profile-username">Jassa</h6>
+                     <span>Web Designer</span>
+                  </div>
+               </li>
+               <li>
+                  <hr class="dropdown-divider">
+               </li>
+               
+               <li> <a (click)="signOut()" class="dropdown-item d-flex align-items-center" routerLink="/" (click)="Onlogout()"> <i
+                        class="bi bi-box-arrow-right"></i> <span>Sign Out</span> </a></li>
+            </ul>
+         </li>
       </ul>
    </div>
 </header>

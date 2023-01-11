@@ -51,6 +51,7 @@ import { ToastComponent } from './layouts/toast/toast.component';
 import { MemberpostComponent } from './pages/memberpost/memberpost.component';
 import { CheckComponent } from './pages/check/check.component';
 import { PolicyAdvocacyComponent } from './pages/policy-advocacy/policy-advocacy.component';
+import { StripeComponent } from './pages/stripe/stripe.component';
 
 
 
@@ -121,6 +122,10 @@ const routes: Routes = [
   { path : 'policy-adovcacy/:id', component : PolicyAdvocacyComponent},
   { path : 'policy-adovcacy/:id/:id2', component : PolicyAdvocacyComponent},
   // { path : 'policy-adovcacy/:id/:id2/:document', component : PolicyAdvocacyComponent}
+
+  // Stripe 
+  {path : 'stripe', component: StripeComponent},
+
 ];
 
 @NgModule({

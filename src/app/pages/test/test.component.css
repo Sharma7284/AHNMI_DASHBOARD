@@ -253,3 +253,14 @@ i {
     border: none;
     color: #F47221;
 }
+/* Header Logo */
+.heading-logo{
+    width: 150px;
+    height: 60px;
+}
+
+.heading-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

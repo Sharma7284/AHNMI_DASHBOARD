@@ -33,10 +33,10 @@ export class MemberpostComponent implements OnInit {
 
     console.log(this.memberForm.value)
 
-    this.service.postMember(this.memberForm.value).subscribe(
-      (res) => {
-        console.log(res)
-      }
-    )
+    // this.service.postMember(this.memberForm.value).subscribe(
+    //   (res) => {
+    //     console.log(res)
+    //   }
+    // )
   }
 }

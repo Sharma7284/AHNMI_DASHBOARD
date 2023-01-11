@@ -1,4 +1,23 @@
-<div class="container py-5">
+<div *ngIf="member" class="container py-2">
+
+    <div class="row d-flex align-items-center  py-4">
+
+        <div class="top-left">
+            <div class="heading-logo">
+                <img src="../../../assets/img/ahnmi-logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="top-right">
+            <div class="heading">
+                <h2 class="text-center" >Fill Membership Details</h2>
+            </div>
+            <div class="heading-tagline">
+                <p class="fs-4 text-center">Please provide firm details to leverage the AHNMI membership benefits</p>
+            </div>
+        </div>
+    </div>
+
     <ul id="progressbar" class="p-0">
         <li [ngClass]="step>=1 ? 'active' : 'inactive'">Corporate Details</li>
         <li [ngClass]="step>=2 ? 'active' : 'inactive'">Contact Person</li>
@@ -6,6 +25,7 @@
         <li [ngClass]="step>=4 ? 'active' : 'inactive'">Organization Details</li>
         <li [ngClass]="step>=5 ? 'active' : 'inactive'">Type And Category</li>
         <li [ngClass]="step>=6 ? 'active' : 'inactive'">Code Of Conduct</li>
+        <li [ngClass]="step>=7 ? 'active' : 'inactive'">Payment</li>
     </ul>
 
     <form [formGroup]="corporateDetails" id="msform">
@@ -611,7 +631,7 @@
                 <div class="d-flex flex-col align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                        <label class="form-label" for="form3Example1c">\Drawn on
+                        <label class="form-label" for="form3Example1c">Drawn on
                                 (Bank)
                                 <span class="text-danger fs-500" >*</span></label>
                         <input type="text" id="form3Example1c" class="form-control" formControlName="drawn_on_bank"
@@ -757,9 +777,40 @@
             <div class="m-btn px-4 d-flex align-items-center justify-content-end gap-2">
                 <input (click)="previous()" type="button" name="previous" class="previous action-button-previous"
                     value="Previous" />
-                <input (click)="getMembership()" type="submit" name="Get Membership" class="membership action-button"
-                    value="Get Membership" />
+                
+                    <input (click)="next()" type="button" name="next" class="next membership action-button" value="Make Payment" />
             </div>
+        </fieldset>
+
+        <fieldset *ngIf="step === 7">
+            <app-stripe></app-stripe>
+            <input (click)="getMembership()"  type="submit" name="Get Membership" class="membership action-button"
+                    value="Get Membership" />
         </fieldset>
     </form>
 </div>
+
+<main *ngIf="!member" class="main" id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-3" *ngFor="let m of membered">
+                <div class="card">
+                    <div class="card-header bg-success text-white d-flex align-items-center justify-content-between">
+                        <div class="header-title">
+                            <p class="m-0 fs-5 font-weight-bold">{{m.title}}</p>
+                        </div>
+                        <div class="header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-download" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                              </svg>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
