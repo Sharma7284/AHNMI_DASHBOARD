@@ -255,3 +255,21 @@ ul li a.active{
     height: 18px !important;
 }
 
+/* Table Width */
+
+#documentTable th:nth-child(1){
+    width: 5% !important;
+}
+#documentTable th:nth-child(2){
+    width: 15% !important;
+}
+#documentTable th:nth-child(3){
+    width: 50% !important;
+}
+#documentTable th:nth-child(4){
+    width: 15% !important;
+}
+#documentTable th:nth-child(5){
+    width: 15% !important;
+    text-align: center;
+}

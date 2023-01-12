@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -74,6 +74,9 @@ import { PolicyAdvocacyComponent } from './pages/policy-advocacy/policy-advocacy
 import { StripeComponent } from './pages/stripe/stripe.component';
 import { NgxStripeModule } from 'ngx-stripe';
 
+// Ng2-search Module Import
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
@@ -142,7 +145,9 @@ import { NgxStripeModule } from 'ngx-stripe';
     HttpClientModule,
     BlogModule,
     PdfViewerModule,
+    FormsModule,
     CommentsModule,
+    Ng2SearchPipeModule,
     NgxStripeModule.forRoot('pk_test_51MH3CBSCK3DQ1FtAszfi1dPAaTzfrhgFkNtnrZPsVTRuQOH1RcsTepxZzSKBdus4GDQNNAnvlXRDJivrXIRARpIX00z1Kffuzl')
   ],
   providers: [],

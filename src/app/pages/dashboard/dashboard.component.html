@@ -1,47 +1,38 @@
 <!-- <app-header *ngIf="shouldShowComponent(url)" ></app-header> -->
 
-<main *ngIf="membershipActive" id="main" class="main">
-   
+<main style="padding: 20px 40px !important;" *ngIf="membershipActive" id="main" class="main">
+
    <section class="section dashboard">
 
       <div class="row py-4">
-         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
-         title="Coming Soon">
+         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coming Soon">
             <div class="cursor d-flex bg-success rounded align-items-center justify-content-between">
-               
+
                <div class="d-icon">
-                  <!-- <i class="bi bi-arrow-down "></i> -->
                   <i class="bi  bi-journal-check"></i>
                </div>
                <h2 class="t m-0  text-white ">Apply Certification</h2>
             </div>
          </div>
-         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
-         title="Coming Soon">
+         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coming Soon">
             <div class="cursor d-flex bg-2 rounded align-items-center justify-content-between">
                <div class="d-icon">
-                  <!-- <i class="bi bi-arrow-down "></i> -->
                   <i class="bi bi-receipt-cutoff"></i>
                </div>
                <h2 class="t m-0  text-white ">Request Advertisment </h2>
             </div>
          </div>
-         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
-         title="Coming Soon">
+         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coming Soon">
             <div class="cursor d-flex bg-1 rounded align-items-center justify-content-between">
                <div class="d-icon ">
-                  <!-- <i class="bi bi-arrow-down "></i> -->
                   <i class="bi bi-question-circle-fill"></i>
-                   <!--  -->
                </div>
                <h2 class="t m-0  text-white">Ask Query</h2>
             </div>
          </div>
-         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
-         title="Coming Soon">
+         <div class="col-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coming Soon">
             <div class="cursor d-flex bg-danger rounded align-items-center justify-content-between">
                <div class="d-icon">
-                  <!-- <i class="bi bi-arrow-down "></i> -->
                   <i class="bi bi-calendar2-event"></i>
                </div>
                <h2 class="t m-0 text-white ">Events & Blogs</h2>
@@ -51,37 +42,9 @@
 
       <div class="row">
 
-         <div class="col-xxl-3 col-xl-12 d-none">
-            <div class="card info-card customers-card red">
-               
-               <div class="card-body">
-                  <div class="card-head d-flex align-items-center justify-content-between">
-                     <h5 class="card-title text-white m-0">Membership</h5>
-                     <i class="bi bg-t fs-1 bi-person-fill"></i>
-                  </div>
-                  <div class="d-flex align-items-center py-2 px-4">
-                     <!-- <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <svg
-                           xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                           class="bi bi-currency-rupee d-none" viewBox="0 0 16 16">
-                           <path
-                              d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
-                        </svg></div> -->
-                     <div class="d-flex align-items-center justify-content-between">
-                        <span class="text-danger small fs-2 fw-bold">12% </span><span
-                           class="text-white font-weight-bold pt-2 ps-1">Increase</span>
-                        <h4 class="m-0"></h4>
-                     </div>
-                  </div>
-                  <div class="view-more-btn d-flex justify-content-center">
-                     <button class=" ">Browse <i class="bi bi-arrow-right-circle-fill"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
          <div class="col-xxl-4 col-md-6">
             <div class="card info-card revenue-card blue">
-               <div class="card-body" (click)="route('policy-adovcacy')" >
-                  <!-- <h5 class="card-title text-white m-0"></h5> -->
+               <div class="card-body" (click)="route('policy-adovcacy')">
                   <div class="card-head d-flex align-items-center justify-content-between">
                      <h5 class="card-title text-white m-0">Policy Adovcacy</h5>
                      <i class="bi bg-t bi-journal-check"></i>
@@ -100,33 +63,16 @@
                </div>
             </div>
          </div>
-         <div class="col-xxl-4 col-xl-12"  > 
+         <div class="col-xxl-4 col-xl-12">
             <div class="card info-card customers-card red">
-               <!-- <div class="filter">
-                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                         <h6>Filter</h6>
-                      </li>
-                      <li><a class="dropdown-item" href="#">Today</a></li>
-                      <li><a class="dropdown-item" href="#">This Month</a></li>
-                      <li><a class="dropdown-item" href="#">This Year</a></li>
-                   </ul>
-                </div> -->
+
                <div class="card-body" style="cursor: 'not-allowed';">
-                  <!-- <h5 class="card-title text-white m-0"> </h5> -->
                   <div class="card-head d-flex align-items-center justify-content-between">
                      <h5 class="card-title text-white m-0">Regulaltory Support</h5>
-                     <!-- <i class="bi bg-t fs-1 bi-person-fill"></i> -->
                      <i class="bi bg-t bi-headset"></i>
                   </div>
                   <div class="d-flex align-items-center py-2 px-4">
-                     <!-- <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <svg
-                           xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                           class="bi bi-currency-rupee d-none" viewBox="0 0 16 16">
-                           <path
-                              d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
-                        </svg></div> -->
+
                      <div class="">
                         <span class="text-danger small pt-1 fs-2 fw-bold">12 </span><span
                            class="text-white font-weight-bold pt-2 ps-1">Documents</span>
@@ -134,34 +80,21 @@
                      </div>
                   </div>
                   <div class="view-more-btn d-flex justify-content-center">
-                     <button style="cursor: 'not-allowed';" class=" ">Coming Soon&nbsp; <i class="bi bi-arrow-right-circle-fill"></i></button>
+                     <button style="cursor: 'not-allowed';" class=" ">Coming Soon&nbsp; <i
+                           class="bi bi-arrow-right-circle-fill"></i></button>
                   </div>
                </div>
             </div>
          </div>
-         <div class="col-xxl-4 col-xl-12" >
+         <div class="col-xxl-4 col-xl-12">
             <div class="card info-card customers-card orange">
-               <!-- <div class="filter">
-                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                         <h6>Filter</h6>
-                      </li>
-                      <li><a class="dropdown-item" href="#">Today</a></li>
-                      <li><a class="dropdown-item" href="#">This Month</a></li>
-                      <li><a class="dropdown-item" href="#">This Year</a></li>
-                   </ul>
-                </div> -->
-               <div class="card-body" style="cursor: 'not-allowed';" >
-                  <!-- <h5 class="card-title m-0"></h5> -->
+
+               <div class="card-body" style="cursor: 'not-allowed';">
                   <div class="card-head d-flex align-items-center justify-content-between">
                      <h5 class="card-title text-white m-0">Schemes & Subsidies</h5>
-                     <!-- <i class="bi bg-t fs-1 bi-person-fill"></i> -->
                      <i class="bi bg-t bi-envelope-check"></i>
                   </div>
                   <div class="d-flex align-items-center">
-                     <!-- <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> <i
-                           class="bi bi-ui-checks text-dark d-none"></i></div> -->
                      <div class="ps-3 py-2">
                         <h4 class="m-0"></h4>
                         <span class=" num  small pt-1 fs-2 fw-bold">28 </span><span
@@ -169,7 +102,8 @@
                      </div>
                   </div>
                   <div class="view-more-btn d-flex justify-content-center">
-                     <button style="cursor: 'not-allowed';" class=" ">Coming Soon &nbsp;<i class="bi bi-arrow-right-circle-fill"></i></button>
+                     <button style="cursor: 'not-allowed';" class=" ">Coming Soon &nbsp;<i
+                           class="bi bi-arrow-right-circle-fill"></i></button>
                   </div>
                </div>
             </div>
@@ -177,53 +111,58 @@
       </div>
 
       <div class="row">
+
+         <!-- Left Side Table -->
          <div class="col-8">
-            <div class="card recent-sales overflow-auto">
+            <div class="card py-1 recent-sales overflow-auto">
                <div class="card-body">
-                  <h5 class="card-title px-0">AHNMI <span>| Today</span></h5>
-                  <table class="table table-borderless datatable">
+                  <!-- Add datatable Class to show search btn -->
+                  <div class="row">
+                     <div class="col-12 d-flex justify-content-between">
+                        <div class="pt-1 sub-categories-title">
+                               <h5 class="card-title px-0">AHNMI <span>| Today</span></h5>
+                            </div>
+                            <div class="search-btn" >
+                                    <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </div>
+                    </div>
+
+
+                  <table class="table table-borderless ">
                      <thead>
                         <tr>
+                           <th scope="col">Date</th>
                            <th scope="col">Document</th>
-                           <th scope="col">Sub Category</th>
+                           <th class="text-center" scope="col">Short Description</th>
+                           <th class="text-center" scope="col">Sub Category</th>
                            <th scope="col">Category</th>
                         </tr>
                      </thead>
-                     <tbody>
-                        <tr>
-                           <th scope="row"><a href="#">2457</a></th>
-                           <td><span class="badge red">Regulaltory Support</span></td>
-                           <td>Brandon Jacob</td>
+                     <tbody *ngFor="let td of recentTable | filter: searchText">
+                        <tr class="pt-4" >
+                           <td class="fs-6">{{td.created_at.split("T")[0]}}</td>
+                           <td class="fs-6">{{td.document_name_slug}}</td>
+                           <td class="text-center "><span class=" text-center ">{{td.docs_longdiscription}}</span></td>
+                           <th class="text-center fs-5" scope="row"><a class="text-center">{{td.subcategory_id}}</a></th>
+                           <td class="text-center ">
+                              <span class="badge blue">Policy Advocacy</span>
+                           </td>
                         </tr>
-                        <tr>
-                           <th scope="row"><a href="#">2147</a></th>
-                           <td><span class="badge blue">Policy Adovcacy</span></td>
-                           <td>Bridie Kessler</td>
-                        </tr>
-                        <tr>
-                           <th scope="row"><a href="#">2049</a></th>
-                           <td><span class="badge bg-warning">Schemes & Subsidies</span></td>
-                           <td>Ashleigh Langosh</td>
-                        </tr>
-                        <tr>
-                           <th scope="row"><a href="#">2644</a></th>
-                           <td><span class="badge red">Regulaltory Support</span></td>
-                           <td>Angus Grady</td>
-                        </tr>
-                        <tr>
-                           <th scope="row"><a href="#">2644</a></th>
-                           <td><span class="badge blue">Policy Adovcacy</span></td>
-                           <td>Raheem Lehner</td>
-                        </tr>
+                        
+                        
                      </tbody>
                   </table>
                </div>
             </div>
          </div>
-         <div class="col-4 d-flex  flex-column justify-content-between">
 
-            <div class="card " data-bs-toggle="tooltip" data-bs-placement="bottom"
-            title="Coming Soon">
+
+         <!-- Right Side Card -->
+         <div class="col-4 d-flex  flex-column gap-3">
+
+            <!-- Checklist Card -->
+            <div class="card m-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coming Soon">
                <div class="card-body">
                   <div class="row">
                      <div class="col-2 bg-success rounded-left p-2 d-flex align-items-center justify-content-center">
@@ -232,13 +171,13 @@
                      <div class="col-10 py-3">
                         <h5>Activity Checklist</h5>
                         <h6 class="m-0">Statement to be filled</h6>
-
                      </div>
                   </div>
                </div>
             </div>
-            <div class="card " data-bs-toggle="tooltip" data-bs-placement="bottom"
-            title="Coming Soon">
+
+            <!-- Edit Card -->
+            <div class="card m-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coming Soon">
                <div class="card-body">
                   <div class="row">
                      <div class="col-2 bg-danger p-2 rounded-left d-flex align-items-center justify-content-center">
@@ -247,14 +186,13 @@
                      <div class="col-10 py-2">
                         <h5>Edit Details</h5>
                         <h6>Edit membership details</h6>
-
                      </div>
                   </div>
                </div>
             </div>
-            
-            <div class="card " data-bs-toggle="tooltip" data-bs-placement="bottom"
-            title="Coming Soon">
+
+            <!-- Certified Card -->
+            <div class="card m-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coming Soon">
                <div class="card-body">
                   <div class="row">
                      <div class="col-2 blue p-2 rounded-left d-flex align-items-center justify-content-center">
@@ -269,8 +207,9 @@
                   </div>
                </div>
             </div>
-            <div class="card " data-bs-toggle="tooltip" data-bs-placement="bottom"
-            title="Coming Soon">
+
+            <!-- Contact Card -->
+            <div class="card m-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Coming Soon">
                <div class="card-body">
                   <div class="row">
                      <div class="col-2 bg-warning p-2 rounded-left d-flex align-items-center justify-content-center">
@@ -279,109 +218,20 @@
                      <div class="col-10 py-2">
                         <h5>Contact</h5>
                         <h6>AHNMI Professionals</h6>
-
                      </div>
                   </div>
                </div>
             </div>
 
-
-
-
-
-
          </div>
+
+
       </div>
 
-      <div class="row d-none">
-         <div class="col-12 ">
 
-            <div class="card">
-               <div class="card-body px-4">
-                  <h5 class="card-title">Latest <span>/events </span></h5>
-                  <div id="reportsChart"></div>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <div class="row d-none">
-
-         <div class="col-6 ">
-            <div class="card px-3 pb-3">
-
-               <!-- <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                     <li class="dropdown-header text-start">
-                        <h6>Filter</h6>
-                     </li>
-                     <li><a class="dropdown-item" href="#">Today</a></li>
-                     <li><a class="dropdown-item" href="#">This Month</a></li>
-                     <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-               </div> -->
-               <div class="card-body pb-0">
-                  <h5 class="card-title">News &amp; Updates <span>| Today</span></h5>
-                  <div class="news">
-                     <div class="post-item clearfix">
-                        <img src="assets/img/news-1.jpg" alt="">
-                        <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
-                        <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
-                     </div>
-                     <div class="post-item clearfix">
-                        <img src="assets/img/news-2.jpg" alt="">
-                        <h4><a href="#">Quidem autem et impedit</a></h4>
-                        <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...
-                        </p>
-                     </div>
-                     <div class="post-item clearfix">
-                        <img src="assets/img/news-3.jpg" alt="">
-                        <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
-                        <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...
-                        </p>
-                     </div>
-                     <div class="post-item clearfix">
-                        <img src="assets/img/news-4.jpg" alt="">
-                        <h4><a href="#">Laborum corporis quo dara net para</a></h4>
-                        <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...
-                        </p>
-                     </div>
-                     <div class="post-item clearfix">
-                        <img src="assets/img/news-5.jpg" alt="">
-                        <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
-                        <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos
-                           eius...</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-6 ">
-            <div class="card">
-
-               <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                     <li class="dropdown-header text-start">
-                        <h6>Filter</h6>
-                     </li>
-                     <li><a class="dropdown-item" href="#">Today</a></li>
-                     <li><a class="dropdown-item" href="#">This Month</a></li>
-                     <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-               </div>
-               <div class="card-body pb-0">
-                  <h5 class="card-title">Website Traffic <span>| Today</span></h5>
-                  <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
-               </div>
-            </div>
-
-         </div>
-      </div>
    </section>
 </main>
 
-<div class="container" *ngFor="!membershipActive">
+<div class="container" *ngIf="!membershipActive">
    <app-test></app-test>
 </div>

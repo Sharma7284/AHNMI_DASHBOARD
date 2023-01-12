@@ -13,6 +13,8 @@ export class PagesRegisterComponent implements OnInit {
   public registerForm !: FormGroup
   isLoading: boolean = false
 
+  isGmailVerify : boolean = false
+
   constructor(private authService: AuthenticationService, private fromBuilder: FormBuilder, private route: Router) { }
 
   ngOnInit(): void {
@@ -34,9 +36,17 @@ export class PagesRegisterComponent implements OnInit {
       (res) => {
         this.isLoading = false
         console.log(res)
+        console.log(res.success.token)
 
+
+        this.authService.postGmailVerify(res.success.token).subscribe(
+          (res) => {
+            console.log(res)
+            // this.isGmailVerify = true
+          }
+        )
         
-        this.route.navigate(['/'])
+        // this.route.navigate(['/'])
 
       },
       (error) => {

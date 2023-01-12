@@ -9,10 +9,15 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class DashboardComponent implements OnInit {
 
-  file = 4;
+  // file = 4;
   membershipActive: boolean = true
 
   url: any;
+
+  recentTable: any[] = []
+
+  // Search Variable 
+  searchText: any
 
   constructor(private elementRef: ElementRef, private _router: Router, private service: AuthenticationService) {
     _router.events.subscribe(
@@ -27,26 +32,15 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.service.getCategories().subscribe(
-      (res) => {
-
-        // this.file = res
-        console.log(this.file)
-        console.log('hi')
-      }
-    )
-
-
     var s = document.createElement("script");
     s.type = "text/javascript";
     s.src = "../assets/js/main.js";
     this.elementRef.nativeElement.appendChild(s);
 
-  }
+    this.getRecentDocumentUploaded(this.recentTable)
+    // console.log(this.recentTable)
 
-  // categories(){
-  //   this.service.getCategories
-  // }
+  }
 
   shouldShowComponent(url: string): boolean {
     switch (true) {
@@ -70,7 +64,26 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  route(link : any) {
+  route(link: any) {
     this._router.navigate(['/' + link + ''])
   }
+
+  getRecentDocumentUploaded(data: any) {
+
+    this.service.getRecentDocument().subscribe(
+      (res) => {
+        this.recentTable = res
+        console.log(this.recentTable)
+
+        let date: any = this.recentTable.map((bill) => bill.created_at)
+
+        
+        
+
+      }, (error) => {
+        console.log(error)
+      }
+    )
+  }
+
 }

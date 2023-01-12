@@ -1,4 +1,5 @@
-<div *ngIf="member" class="container py-2">
+<!-- Before Membership Filled Container -->
+<div *ngIf="!member" class="container py-2">
 
     <div class="row d-flex align-items-center  py-4">
 
@@ -10,7 +11,7 @@
 
         <div class="top-right">
             <div class="heading">
-                <h2 class="text-center" >Fill Membership Details</h2>
+                <h2 class="text-center">Fill Membership Details</h2>
             </div>
             <div class="heading-tagline">
                 <p class="fs-4 text-center">Please provide firm details to leverage the AHNMI membership benefits</p>
@@ -44,7 +45,7 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example1c">Name of organisation
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" formControlName="Name_of_Organization" class="form-control"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Name_of_Organization.errors }" />
@@ -57,7 +58,7 @@
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example3c">Address
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example3c" class="form-control" formControlName="Address"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Address.errors }" />
@@ -70,7 +71,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">City
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4c" class="form-control " formControlName="City"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.City.errors }" />
@@ -80,7 +81,7 @@
                     </div>
                     <div class="form-outline  mb-0">
                         <label class="form-label" for="form3Example4c">Pincode
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example4c" class="form-control" formControlName="Pincode"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Pincode.errors }" />
@@ -93,7 +94,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Telephone
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example4c" class="form-control" formControlName="Telephone"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Telephone.errors }" />
@@ -103,7 +104,7 @@
                     </div>
                     <div class="form-outline mb-0">
                         <label class="form-label" for="form3Example4c">Fax
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example4c" class="form-control" formControlName="Fax"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Fax.errors }" />
@@ -116,7 +117,7 @@
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example4cd">Website
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4cd" class="form-control" formControlName="Website"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Website.errors }" />
@@ -130,7 +131,7 @@
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example4cd">Organization
                             Head in India (Mr/Ms)
-                            <span class="text-danger fs-500" >*</span></label>
+                            <span class="text-danger fs-500">*</span></label>
                         <input type="text" id="form3Example4cd" class="form-control"
                             formControlName="Organization_Head_in_India"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Organization_Head_in_India.errors }" />
@@ -143,7 +144,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Designation
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4c" class="form-control" formControlName="Designation"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Designation.errors }" />
@@ -154,7 +155,7 @@
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label " for="form3Example4c">Direct
                             Phone
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example4c" class="form-control" formControlName="Direct_Phone"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Direct_Phone.errors }" />
@@ -167,7 +168,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Mobile
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example4c" class="form-control" formControlName="Mobile"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Mobile.errors }" />
@@ -178,7 +179,7 @@
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label " for="form3Example4c">Email
                             Id
-                            <span class="text-danger fs-500" >*</span></label>
+                            <span class="text-danger fs-500">*</span></label>
                         <input type="email" id="form3Example4c" class="form-control" formControlName="Email_Id"
                             [ngClass]="{ 'is-invalid': corporate_step && corporate.Email_Id.errors }" />
                         <div *ngIf="corporate_step && corporate.Email_Id.errors?.required">
@@ -213,7 +214,7 @@
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example1c">Name
                             (Mr/Ms)
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example1c" class="form-control" formControlName="Name_Mr_Ms"
                             [ngClass]="{ 'is-invalid': contact_step && contact.Name_Mr_Ms.errors }" />
@@ -226,7 +227,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Designation
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4c" class="form-control" formControlName="Designation_2"
                             [ngClass]="{ 'is-invalid': contact_step && contact.Designation_2.errors }" />
@@ -237,7 +238,7 @@
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label " for="form3Example4c">Direct
                             Phone
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example4c" class="form-control" formControlName="Direct_Phone_2"
                             [ngClass]="{ 'is-invalid': contact_step && contact.Direct_Phone_2.errors }" />
@@ -250,7 +251,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Mobile
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example4c" class="form-control" formControlName="Mobile_2"
                             [ngClass]="{ 'is-invalid': contact_step && contact.Mobile_2.errors }" />
@@ -261,7 +262,7 @@
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label " for="form3Example4c">Email
                             Id
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="email" id="form3Example4c" class="form-control" formControlName="Email_id_2"
                             [ngClass]="{ 'is-invalid': contact_step && contact.Email_id_2.errors }" />
@@ -300,7 +301,7 @@
                     </div>
                 </div>
                 <div class="text-box pb-2">
-                    <h6>Please select any :-&nbsp;<span class="text-danger fs-500" >*</span></h6>
+                    <h6>Please select any :-&nbsp;<span class="text-danger fs-500">*</span></h6>
                 </div>
 
                 <div class="d-flex flex-row align-items-center ">
@@ -381,7 +382,7 @@
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example1c">Year of
                             Establishment
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example1c" class="form-control"
                             formControlName="year_Of_establishment"
@@ -470,7 +471,7 @@
                         <label class="form-label" for="form3Example1c">Annual
                             revenue during last Financial
                             Year
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="number" id="form3Example1c" class="form-control" formControlName="annual_revenue"
                             [ngClass]="{ 'is-invalid': organization_step && organization.annual_revenue.errors }" />
@@ -483,8 +484,8 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example1c">Total
-                                Employees
-                                <span class="text-danger fs-500" >*</span></label>
+                            Employees
+                            <span class="text-danger fs-500">*</span></label>
                         <input type="number" id="form3Example1c" class="form-control" formControlName="Total_Employees"
                             [ngClass]="{ 'is-invalid': organization_step && organization.total_employees.errors }" />
                         <div *ngIf="organization_step && organization.total_employees.errors?.required">
@@ -496,7 +497,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Manufacturing
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4c" class="form-control" formControlName="manufacturing"
                             [ngClass]="{ 'is-invalid': organization_step && organization.manufacturing.errors }" />
@@ -507,7 +508,7 @@
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label " for="form3Example4c">Sales /
                             Admin professionals
-                            <span class="text-danger fs-500" >*</span></label>
+                            <span class="text-danger fs-500">*</span></label>
                         <input type="text" id="form3Example4c" class="form-control"
                             formControlName="sales_admin_professionals"
                             [ngClass]="{ 'is-invalid': organization_step && organization.sales_admin_professionals.errors }" />
@@ -557,7 +558,8 @@
                     </div>
                 </div>
                 <div class="text-box pb-2">
-                    <h6>From the options given below, select any one :-&nbsp;<span class="text-danger fs-500" >*</span></h6>
+                    <h6>From the options given below, select any one :-&nbsp;<span class="text-danger fs-500">*</span>
+                    </h6>
                 </div>
 
                 <div class="d-flex flex-row align-items-center ">
@@ -609,7 +611,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Cheque No
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4c" class="form-control" formControlName="Designation_2"
                             [ngClass]="{ 'is-invalid': type_and_category_step && typeandcategory.cheque_no.errors }" />
@@ -619,7 +621,7 @@
                     </div>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label " for="form3Example4c">Dated
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="date" id="form3Example4c" class="form-control" formControlName="date"
                             [ngClass]="{ 'is-invalid': type_and_category_step && typeandcategory.date.errors }" />
@@ -632,8 +634,8 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label" for="form3Example1c">Drawn on
-                                (Bank)
-                                <span class="text-danger fs-500" >*</span></label>
+                            (Bank)
+                            <span class="text-danger fs-500">*</span></label>
                         <input type="text" id="form3Example1c" class="form-control" formControlName="drawn_on_bank"
                             [ngClass]="{ 'is-invalid': type_and_category_step && typeandcategory.drawn_on_bank.errors }" />
                         <div *ngIf="type_and_category_step && typeandcategory.drawn_on_bank.errors?.required">
@@ -715,8 +717,8 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label pt-3" for="form3Example1c">Signature
-                                of Authorised Signatory
-                                <span class="text-danger fs-500" >*</span></label>
+                            of Authorised Signatory
+                            <span class="text-danger fs-500">*</span></label>
                         <input type="file" id="form3Example1c" class="form-control" formControlName="file"
                             [ngClass]="{ 'is-invalid': code_of_category_step && codeofconduct.file.errors }" />
                         <div *ngIf="code_of_category_step && codeofconduct.file.errors?.required">
@@ -730,7 +732,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Name
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4c" class="form-control" formControlName="name"
                             [ngClass]="{ 'is-invalid': code_of_category_step && codeofconduct.name.errors }" />
@@ -740,7 +742,7 @@
                     </div>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label " for="form3Example4c">Place
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4c" class="form-control" formControlName="place"
                             [ngClass]="{ 'is-invalid': code_of_category_step && codeofconduct.place.errors }" />
@@ -754,7 +756,7 @@
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0" style="margin-right: 10px;">
                         <label class="form-label" for="form3Example4c">Designation
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="text" id="form3Example4c" class="form-control" formControlName="designation"
                             [ngClass]="{ 'is-invalid': code_of_category_step && codeofconduct.designation.errors }" />
@@ -764,7 +766,7 @@
                     </div>
                     <div class="form-outline flex-fill mb-0">
                         <label class="form-label " for="form3Example4c">Date
-                            <span class="text-danger fs-500" >*</span>
+                            <span class="text-danger fs-500">*</span>
                         </label>
                         <input type="date" id="form3Example4c" class="form-control" formControlName="date2"
                             [ngClass]="{ 'is-invalid': code_of_category_step && codeofconduct.date.errors }" />
@@ -777,37 +779,84 @@
             <div class="m-btn px-4 d-flex align-items-center justify-content-end gap-2">
                 <input (click)="previous()" type="button" name="previous" class="previous action-button-previous"
                     value="Previous" />
-                
-                    <input (click)="next()" type="button" name="next" class="next membership action-button" value="Make Payment" />
+
+                <input (click)="next()" type="button" name="next" class="next membership action-button"
+                    value="Make Payment" />
             </div>
         </fieldset>
 
         <fieldset *ngIf="step === 7">
-            <app-stripe></app-stripe>
-            <input (click)="getMembership()"  type="submit" name="Get Membership" class="membership action-button"
-                    value="Get Membership" />
+            <div class="row p-2">
+                <div class="col-6 d-none">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <ul id="progressbar" class="p-0 d-flex flex-column">
+                                <li [ngClass]="step>=1 ? 'active' : 'inactive'"><span></span></li>
+                                <li [ngClass]="step>=2 ? 'active' : 'inactive'"></li>
+                                <li [ngClass]="step>=3 ? 'active' : 'inactive'"></li>
+                                <li [ngClass]="step>=4 ? 'active' : 'inactive'"></li>
+                                <li [ngClass]="step>=5 ? 'active' : 'inactive'"></li>
+                                <li [ngClass]="step>=6 ? 'active' : 'inactive'"></li>
+                                <!-- <li [ngClass]="step>=7 ? 'active' : 'inactive'"></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card" style="margin-right: 18px;">
+                        <div class="card-body  ">
+                            <app-stripe></app-stripe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="m-btn px-4 d-flex align-items-center justify-content-end gap-2">
+                    <input (click)="previous()" type="button" name="previous" class="previous action-button-previous"
+                        value="Previous" />
+    
+                        <input (click)="getMembership()" type="submit" name="Get Membership" class="membership action-button"
+                        value="Get Membership" />
+                </div>
+
+            
         </fieldset>
     </form>
 </div>
 
-<main *ngIf="!member" class="main" id="main">
+<!-- After Membership Filled Container -->
+<main *ngIf="member" class="main" id="main">
     <div class="container">
+
+        <div class="row">
+            <div class="col-12 d-flex flex-column align-items-center justify-content-center pb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#1c9ceb"
+                    class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                </svg>
+                <div class="tagline pt-2">
+                    <p class="m-0 fs-5">- - - - - - - - - - - - - - - - - - - - T A G L I N E - - - - - - - - - - - - - - - - - - -</p>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-3" *ngFor="let m of membered">
-                <div class="card">
+                <div class="card ">
                     <div class="card-header bg-success text-white d-flex align-items-center justify-content-between">
                         <div class="header-title">
                             <p class="m-0 fs-5 font-weight-bold">{{m.title}}</p>
                         </div>
                         <div class="header-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-download" viewBox="0 0 16 16">
-                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+                                class="bi bi-download" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                <path
+                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                            </svg>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        
                     </div>
                 </div>
             </div>

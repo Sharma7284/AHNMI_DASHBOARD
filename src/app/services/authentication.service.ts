@@ -138,7 +138,7 @@ export class AuthenticationService {
     return this.http.get<any>('https://datastuntstaging.co.in/ahnmi_lara/api/policy-adovcacy/policy-adovcacy/document/' + file, {
       headers: {
         'Authorization': 'Bearer ' + token,
-        'Access-Control-Allow-Origin' : '*'
+        'Access-Control-Allow-Origin': '*'
       }
     })
   }
@@ -216,5 +216,28 @@ export class AuthenticationService {
     })
   }
 
+  // Recent Document GET APIs
+  getRecentDocument() {
+
+    let token = localStorage.getItem('token')
+
+    return this.http.get<any>(this.baseUrl + '/recent-docs', {
+      headers: {
+        'Authorization': 'Bearer ' + token
+      }
+    })
+  }
+
+  // Gmail Verfication
+  postGmailVerify( register_token : any ) {
+
+    // let token = localStorage.getItem('token')
+
+    return this.http.post<any>(this.baseUrl + '/email/verification-notification',register_token, {
+      headers: {
+        'Authorization': 'Bearer ' + register_token
+      }
+    })
+  }
 
 }

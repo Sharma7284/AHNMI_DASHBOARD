@@ -1,13 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators,  } from '@angular/forms'
 import { AuthenticationService } from 'src/app/services/authentication.service';
+
+// Import PIPE 
+import { Pipe, PipeTransform } from '@angular/core';
+// import { pipe } from 'rxjs';
+
 
 @Component({
   selector: 'app-policy-advocacy',
   templateUrl: './policy-advocacy.component.html',
   styleUrls: ['./policy-advocacy.component.css']
 })
+
+
+
 export class PolicyAdvocacyComponent implements OnInit {
 
   src = 'https://datastuntstaging.co.in/ahnmi_lara/storage/app/uploads/documents/PDF/pli-document/PLI.pdf'
@@ -39,9 +47,14 @@ export class PolicyAdvocacyComponent implements OnInit {
 
   formid: any
 
-  title : any
+  title: any
 
   isLoading: boolean = false
+
+
+  // Seacrh Functionality Variable
+  searchText : any
+  
 
   constructor(private service: AuthenticationService,
     private route: Router,
@@ -51,26 +64,27 @@ export class PolicyAdvocacyComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.src)
-
     this.replyCommentId = NaN;
 
     this.activeRoute.paramMap.subscribe(
       (res) => {
-        console.log(res)
         this.categoriesSlug = res.get('id')
-        console.log(this.categoriesSlug, ' hey')
-        // this.subCategoriesSlug = res.get('id2')
         this.documentSlug = res.get('id2')
-        // console.log(this.documentSlug)
-        // console.log(this.documentSlug)
       }
     )
 
 
-    this.getCategories()
+    if (!this.categoriesSlug && !this.documentSlug) {
+      this.getCategories()
+    }
 
-    this.documentFile(this.documentSlug)
+    if (this.categoriesSlug) {
+      this.getSubCategories(this.categoriesSlug, this.docId)
+    }
+
+    if (this.documentSlug) {
+      this.documentFile(this.documentSlug)
+    }
 
     this.commentForm = this.fb.group({
       postmessage: ['', Validators.required]
@@ -102,27 +116,32 @@ export class PolicyAdvocacyComponent implements OnInit {
 
   // Get Categories
   getCategories() {
+
+    this.isLoading = true
+
     this.service.getCategories().subscribe(
       (res) => {
+
+        this.isLoading = false
         this.categories = res
         console.log(res)
-        this.getSubCategories(res)
-        
-        // this.subCategoriesTitle = res.Category_name
+        // this.getSubCategories(this.categoriesSlug, res)
       }
     )
   }
 
   // Get SubCategories
-  getSubCategories(e: any) {
+  getSubCategories(e: any, id: any) {
 
+    console.log(e)
+    console.log(id)
+    this.title = e
 
-    this.service.getSubCategories(this.categoriesSlug).subscribe(
+    this.service.getSubCategories(e).subscribe(
       (res) => {
-        console.log(res)
         this.subCategories = res
         this.getDocument(res[0].id)
-        
+
       }
     )
 
@@ -133,8 +152,8 @@ export class PolicyAdvocacyComponent implements OnInit {
 
     this.service.getDocument(id).subscribe(
       (res) => {
-        console.log(res)
         this.documentData = res
+        console.log(res)
       }
     )
   }
@@ -143,13 +162,10 @@ export class PolicyAdvocacyComponent implements OnInit {
 
     this.service.getDocumentFile(documentName).subscribe(
       (res) => {
-        console.log(res)
         this.docId = res.id
         this.image = 'https://datastuntstaging.co.in/ahnmi_lara/storage/app/' + res.docs_image
         this.src = 'https://datastuntstaging.co.in/ahnmi_lara/storage/app/' + res.pdf_file
-        console.log(this.docId)
-        // this.src = JSON.parse(res)
-        console.log(this.src)
+
         this.getComment(this.docId)
         this.route.navigate(['/policy-adovcacy/', this.categoriesSlug, documentName])
       }
@@ -163,9 +179,7 @@ export class PolicyAdvocacyComponent implements OnInit {
   onComment() {
 
     let document_id = this.docId
-    console.log(document_id)
     let comment = this.commentForm.get('postmessage')?.value
-    console.log(comment)
 
     this.isLoading = true
 
@@ -179,7 +193,6 @@ export class PolicyAdvocacyComponent implements OnInit {
 
         this.commentForm.reset()
 
-        console.log(res)
         this.comments = res[1]
       }
     )
@@ -188,32 +201,25 @@ export class PolicyAdvocacyComponent implements OnInit {
 
   getComment(id: any) {
 
-    console.log(id, ' hey')
     this.service.getMemberPost(id).subscribe(
       (res) => {
         this.comments = res
         this.formid = res.id
-        console.log(res)
-        // console.log(this.formid)
       }
     )
   }
 
 
   onReply(e: any) {
-    const post_comment = this.replyForm.get('post_comment')?.value
-    console.log(post_comment)
 
+    const post_comment = this.replyForm.get('post_comment')?.value
     let document_id = this.docId
-    // this.docId
-    console.log(this.docId)
 
     document.getElementById('replybtn')?.classList.add('hide')
     this.isReply = true
 
     this.service.postReply(post_comment, e, document_id).subscribe(
       (res) => {
-        console.log(res)
         this.replyCommentId = NaN;
         this.replyForm.reset()
 
@@ -221,35 +227,34 @@ export class PolicyAdvocacyComponent implements OnInit {
         this.isReply = false
 
         this.comments = res[1]
-      },(error) => {
+      }, (error) => {
         document.getElementById('replybtn')?.classList.remove('hide')
         this.isReply = false
       }
     )
   }
-  replyCommentId: any = NaN;
-  reply(e: any) {
-    console.log(e)
-    console.log(this.comments.indexOf(e))
-    this.replyCommentId = this.comments.indexOf(e)
 
+  replyCommentId: any = NaN;
+
+  reply(e: any) {
+    this.replyCommentId = this.comments.indexOf(e)
   }
 
   cancel() {
     this.replyCommentId = NaN;
   }
 
-  browse(e : any, id :any) {
-    console.log(e)
-    console.log(this.title)
-    
+  browse(e: any, id: any) {
+
+    console.log(e, id)
+
     this.route.navigate(['policy-adovcacy/' + id])
-    this.title = e
+
+    this.getSubCategories(e, id)
+
+
   }
 
-  // addLoading(){
-  //   this.isLoading  =true
-  // }
 
 }
 

@@ -36,7 +36,7 @@ export class TestComponent implements OnInit {
   type_and_category_step = false;
   code_of_category_step = false;
 
-  step = 1;
+  step = 7;
 
   constructor(private formBuilder: FormBuilder, private auth : AuthenticationService) { }
 

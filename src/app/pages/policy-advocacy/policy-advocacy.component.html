@@ -1,3 +1,4 @@
+<!-- For Categories Start Here -->
 <main class="main" id="main" *ngIf="!categoriesSlug">
     <div class="pagetitle">
         <nav>
@@ -8,9 +9,25 @@
         </nav>
     </div>
 
-    <div class="container py-5">
+    <div class="container py-3">
+
         <div class="row">
-            <div class="col-4" *ngFor="let d of categories">
+            <div class="col-12 d-flex justify-content-between">
+                <div class="pt-1 sub-categories-title">
+                    <p class="fs-4 ">{{title}}</p>
+                </div>
+                <div class="search-btn pb-3" >
+                        <input [(ngModel)]="searchText"  type="text" class="form-control" placeholder="Search">
+                        <!-- <h2>{{searchText}}</h2> -->
+                </div>
+            </div>
+        </div>
+        <!-- <div class="seacrh-box d-flex justify-content-end">
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText">
+        </div> -->
+
+        <div class="row">
+            <div class="col-4" *ngFor="let d of categories | filter: searchText">
                 <div class="card cat-card" (click)="browse(d.Category_name, d.id)">
                     <div class="card-body bg-success rounded text-white p-0">
                         <div class="head w-100 d-flex align-items-center justify-content-between">
@@ -18,8 +35,7 @@
                             <i class="bi bg-t pt-2 bg-5 px-3 fs-1 bi-journal-check"></i>
                         </div>
                         <div class="px-3 py-2">
-                            <p class="fs-6 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                ullam.</p>
+                            <p class="" >{{d.longdiscription}}</p>
                         </div>
                         <div class="view-more-btn text-center">
                             <a>View More <i class="bi bi-arrow-right-circle-fill"></i></a>
@@ -32,13 +48,16 @@
 
 </main>
 
+<!-- For Categories End Here -->
+
+<!-- For Sub Categories Start Here -->
 <main class="main" id="main" *ngIf="categoriesSlug && !documentSlug">
     <div class="pagetitle">
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
-                <li class="breadcrumb-item active"><a routerLink="/dashboard">Policy Adovcacy</a></li>
-                <li class="breadcrumb-item active">{{categoriesSlug}}</li>
+                <li class="breadcrumb-item active"><a routerLink="/policy-adovcacy">Policy Adovcacy</a></li>
+                <li class="breadcrumb-item active">{{title}}</li>
             </ol>
         </nav>
     </div>
@@ -47,11 +66,12 @@
 
         <div class="row">
             <div class="col-12 d-flex justify-content-between">
-                <div class="py-3 sub-categories-title">
+                <div class="pt-1 sub-categories-title">
                     <p class="fs-4 ">{{title}}</p>
                 </div>
-                <div class="search-btn">
-                    <input type="text" class="form-control" placeholder="search">
+                <div class="search-btn" >
+                        <input [(ngModel)]="searchText"  type="text" class="form-control" placeholder="Search">
+                        <!-- <h2>{{searchText}}</h2> -->
                 </div>
             </div>
         </div>
@@ -64,7 +84,7 @@
                         <nav>
                             <ul class="m-0 p-0">
                                 <!-- <li *ngFor="let i of subCategories"><a [routerLink]="['/policy-adovcacy/5', i.Sub_Category_name]" >{{i.Sub_Category_name}}</a></li> -->
-                                <li *ngFor="let i of subCategories"><a
+                                <li *ngFor="let i of subCategories " ><a
                                         (click)="getDocument(i.id)">{{i.Sub_Category_name}}</a></li>
                             </ul>
                         </nav>
@@ -76,20 +96,26 @@
                     <div class="card-body">
                         <table id="documentTable" class="w-100">
                             <thead class=" text-white">
-                                <th class="py-2 text-center" style="width: 8%;">Id</th>
+
+                                <th class="py-2 px-3">ID</th>
+                                <th class="py-2 px-3">Date</th>
                                 <th class="py-2">Document Name</th>
-                                <th class="py-2" style="width: 20%;">Document Status</th>
+                                <th class="py-2" >Short Description</th>
+                                <th class="py-2" >Browse</th>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let d of documentData">
-                                    <td class="text-center">{{d.id}}</td>
+                                <tr *ngFor="let d of documentData | filter:searchText ">
+
+                                    <td class="text-center" >{{d.id}}</td>
+                                    <td class="px-3">{{d.created_at.split('T')[0]}}</td>
                                     <td>{{d.document_name}}</td>
-                                    <td class="d-flex gap-2 p-3">
+                                    <td class="text-center">{{d.docs_shortdiscription}}</td>
+                                    <td class="d-flex justify-content-center gap-2  p-3">
                                         <p class="badge m-0 bg-info p-2"> <a (click)="documentFile(d.document_name)"
-                                                class="m-0 p-0 text-white">
+                                                class="m-0 p-0  text-center text-white">
                                                 View</a>
                                         </p>
-                                        <p class="badge m-0 bg-success p-2">Approved</p>
+                                        <!-- <p class="badge m-0 bg-success p-2">Approved</p> -->
                                     </td>
                                 </tr>
                             </tbody>
@@ -101,12 +127,16 @@
     </div>
 </main>
 
+<!-- For Sub Categories End Here -->
+
+<!-- For Document Start Here -->
 <main class="main" id="main" *ngIf="documentSlug">
     <div class="pagetitle">
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
-                <li class="breadcrumb-item active"><a routerLink="/dashboard">Policy Adovcacy</a></li>
+                <li class="breadcrumb-item active"><a routerLink="/policy-adovcacy">Policy Adovcacy</a></li>
+                <li class="breadcrumb-item active"><a routerLink="/policy-adovcacy/{{categoriesSlug}}">{{categoriesSlug}}</a></li>
                 <li class="breadcrumb-item active">{{documentSlug}}</li>
             </ol>
         </nav>
@@ -116,10 +146,6 @@
         <div class="row">
             <div class="col-12">
                 <div class="card ">
-
-                    <!-- <div class="image">
-                        <img [src]="image" alt="">
-                    </div> -->
 
                     <div class="pdf-container rounded">
                         <pdf-viewer [src]="src" [fit-to-page]="false" [stick-to-page]="true" [autoresize]="true"
@@ -143,7 +169,6 @@
                     <div class="card-body">
 
                         <h4 class="text-capitalize pb-2">{{documentSlug}}</h4>
-                        <!-- <comments currentUserId="1"></comments> -->
                         <form class="comment-form d-flex flex-column justify-content-center align-items-end gap-2 "
                             [formGroup]="commentForm" (ngSubmit)="onComment()">
 
@@ -156,8 +181,6 @@
 
                             
                         </form>
-                        <!-- <div *ngIf="true" class="d-flex align-items-center justify-content-center loading">
-                        </div> -->
 
                         <div class="comment-container d-flex align-items-start py-2"
                             *ngFor="let c of comments; let i = index">
@@ -172,9 +195,7 @@
                                     <!-- <p class="m-0">{{c.created_at}}</p> -->
                                 </div>
                                 <p class="m-0 post-message">{{c.postmessage}}</p>
-                                <!-- <div class="reply-btn">
-                                    <button *ngIf="isReply">reply</button>
-                                </div> -->
+                                
                                 <div class="comment-feature d-flex gap-2">
                                     <button *ngIf="!(i==replyCommentId)" (click)="reply(c)"
                                         class="text-info replybtn pt-1 width-fit text-info mt-2">Reply</button>
@@ -224,3 +245,7 @@
     </div>
 
 </main>
+
+<!-- For Document End Here -->
+
+<app-loader *ngIf="isLoading" ></app-loader>

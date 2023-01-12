@@ -19,16 +19,13 @@ export class PagesLoginComponent implements OnInit {
   constructor(private authService: AuthenticationService, private formBuilder: FormBuilder, private route: Router) { }
 
   ngOnInit(): void {
+
+    // Login Form Name
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
 
-    // this.authService.authDetails().subscribe(
-    //   (res) => {
-    //     console.log(res)
-    //   }
-    // )
   }
 
   onLogin(loginForm: FormGroup) {
@@ -41,7 +38,6 @@ export class PagesLoginComponent implements OnInit {
     this.authService.authLogin(this.loginForm.value).subscribe(
       (res) => {
 
-        // this.isLoading = false
         this.loading = false
 
         const token = res.success.token
@@ -57,11 +53,11 @@ export class PagesLoginComponent implements OnInit {
         this.route.navigate(['/dashboard'])
       }, (error) => {
 
-        // this.isLoading = false
         this.error = true
+        console.log('hello')
+        document.getElementById('loginbtn')?.classList.remove('hide')
         this.loading = false
 
-        document.getElementById('loginBtn')?.classList.remove('hide')
 
       }
     )

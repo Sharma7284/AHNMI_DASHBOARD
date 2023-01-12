@@ -154,11 +154,29 @@ h5{
     color: white;
 }
 
-.dashboard .recent-sales .table thead th:nth-child(2){
-    width: 50% !important;
+.dashboard .recent-sales .table thead th{
+    font-weight: 700;
 }
 .dashboard .recent-sales .table thead th:nth-child(1){
+    width: 15% !important;
+}
+.dashboard .recent-sales .table thead th:nth-child(2){
+    width: 30% !important;
+}
+.dashboard .recent-sales .table thead th:nth-child(3){
     width: 10% !important;
+}
+.dashboard .recent-sales .table thead th:nth-child(4){
+    width: 20% !important;
+}
+.dashboard .recent-sales .table thead th:nth-child(5){
+    width: 5% !important;
+    text-align: center;
+    
+}
+.dashboard .recent-sales .table thead th:nth-child(3){
+    text-align: center;
+    width: 15% !important;
 }
 
 
